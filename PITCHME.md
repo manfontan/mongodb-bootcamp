@@ -2,7 +2,7 @@
 
 ---
 
-### What is LDAP  
+### What is LDAP?  
 LDAP stands for Lightweight Directory Access Protocol.
 
 +++
