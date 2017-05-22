@@ -121,6 +121,10 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 
 ---
 
+# Q&A
+
+---
+
 ### References  
 
 - [Lightweight Directory Access Protocol (LDAP)](https://tools.ietf.org/pdf/rfc4511.pdf)  
