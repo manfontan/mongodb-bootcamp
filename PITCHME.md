@@ -3,7 +3,9 @@
 +++
 
 ### Resources
+
 [github repo - https://github.com/manfontan/mongodb-bootcamp](https://github.com/manfontan/mongodb-bootcamp)  
+
 [online slides - https://gitpitch.com/manfontan/mongodb-bootcamp](https://gitpitch.com/manfontan/mongodb-bootcamp)  
 
 ---
@@ -67,9 +69,10 @@ DC tree
 
   - OIDs:  
     - [1.3.6.1.4.1.34601](https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers)
-    - IANA  
+    - [IANA](https://www.iana.org/about)  
 
-Note: who is this guy? well it is us :)
+Note: who is this guy? well it is us :)  
+Note: IANA internet assigned numbers authority
 
 +++
 
@@ -146,7 +149,7 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 - [Mongodb 3.4 LDAP docs](https://docs.mongodb.com/manual/core/security-ldap/)  
 - [IANA enterprise numbers](https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers)  
 - [mongoldap](https://docs.mongodb.com/manual/reference/program/mongoldap/)  
-- [Basic LDAP Concepts](https://www.ldap.com/basic-ldap-concepts)  
+- [Basic LDAP Concepts](https://www.ldap.com/)  
 - [Openldap Admin guide](http://www.openldap.org/doc/admin24/)  
 - [List of LDAP software](https://en.wikipedia.org/wiki/List_of_LDAP_software#Server_software)  
 - [GitPitch](https://github.com/gitpitch/gitpitch/wiki/Slide-Delimiters)  
