@@ -23,8 +23,12 @@ LDAP stands for Lightweight Directory Access Protocol.
 
 +++
 
-  - P: Protocol, not a server(implementation of the protocol) as many refer to it.
-  Understand the protocol to solve server issues. [IETF](http://www.ietf.org/) Standard Track protocol and is specified in "Lightweight Directory Access Protocol (LDAP) Technical Specification Road Map" [RFC4510](http://www.rfc-editor.org/rfc/rfc4510.txt)  
+  - P: Protocol  
+    - not server(implementation of the protocol) as many refer to it.  
+    - [IETF](http://www.ietf.org/) Standard Track protocol and is specified in "Lightweight Directory Access Protocol (LDAP) Technical Specification Road Map" [RFC4510](http://www.rfc-editor.org/rfc/rfc4510.txt)  
+      
+    **Understand the protocol to solve server issues**
+
 
 ---
 
