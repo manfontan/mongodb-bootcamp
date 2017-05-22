@@ -19,13 +19,13 @@ LDAP stands for Lightweight Directory Access Protocol.
 
 +++
 
-Figure 1.1: LDAP directory tree(traditional naming):  
+LDAP directory tree(traditional naming)  
 
 +++?image=intro_tree.png  
 
 +++
 
-Figure 1.2: DC tree  
+DC tree  
 
 +++?image=intro_dctree.png
 
