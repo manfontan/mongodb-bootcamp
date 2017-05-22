@@ -52,15 +52,15 @@ LDAP stands for Lightweight Directory Access Protocol.
 
 +++
 
-    - **Attribute syntaxes** define the types of data that can be represented in a directory server.  
+  - **Attribute syntaxes** define the types of data that can be represented in a directory server.  
 
 +++
 
-    - **Matching rules** define the kinds of comparisons that can be performed against LDAP data.  
+  - **Matching rules** define the kinds of comparisons that can be performed against LDAP data.  
 
 +++
 
-    - **Attribute types&** define named units of information that may be stored in entries.   
+  - **Attribute types&** define named units of information that may be stored in entries.   
 
 +++
 
@@ -110,7 +110,7 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 ---
 
   Figure 1.2: DC tree  
-?image=intro_dctree.png
+---?image=intro_dctree.png
 
 ---
 
