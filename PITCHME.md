@@ -3,8 +3,8 @@
 +++
 
 ### Resources
-[github repo](https://github.com/manfontan/mongodb-bootcamp)  
-[online slides](https://gitpitch.com/manfontan/mongodb-bootcamp)  
+[github repo - https://github.com/manfontan/mongodb-bootcamp](https://github.com/manfontan/mongodb-bootcamp)  
+[online slides - https://gitpitch.com/manfontan/mongodb-bootcamp](https://gitpitch.com/manfontan/mongodb-bootcamp)  
 
 ---
 
