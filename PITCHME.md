@@ -137,6 +137,14 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 ### LDAP flavors  
 [Server implementations](https://en.wikipedia.org/wiki/List_of_LDAP_software#Server_software)
 
++++
+
+Microsoft AD
+
++++
+
+Openldap
+
 ---
 
   Figure 1.3: ldap message
