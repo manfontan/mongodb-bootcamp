@@ -41,14 +41,13 @@ LDAP stands for Lightweight Directory Access Protocol.
     - [1.3.6.1.4.1.34601](https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers)
     - IANA  
 
-
 ---
 
     - There are a number of different types of elements that may comprise an LDAP schema. Every LDAP schema must include the following elements:
-      - Attribute syntaxes define the types of data that can be represented in a directory server.  
-      - Matching rules define the kinds of comparisons that can be performed against LDAP data.  
-      - Attribute types define named units of information that may be stored in entries.   
-      - Object classes define named collections of attribute types which may be used in entries containing that class, and which of those attribute types will be required rather than optional.  
+    - Attribute syntaxes define the types of data that can be represented in a directory server.  
+    - Matching rules define the kinds of comparisons that can be performed against LDAP data.  
+    - Attribute types define named units of information that may be stored in entries.   
+    - Object classes define named collections of attribute types which may be used in entries containing that class, and which of those attribute types will be required rather than optional.  
 
 ---
 
@@ -94,9 +93,9 @@ LDAP stands for Lightweight Directory Access Protocol.
 ---
 
   Figure 1.2: DC tree  
-  ![Figure 1.2: DC tree](intro_dctree.png)
+![Figure 1.2: DC tree](intro_dctree.png)
 
 ---
 
   Figure 1.3: ldap message  
-  ![Figure 2.3: LDAP message](intro_ldap_message.png)
+![Figure 2.3: LDAP message](intro_ldap_message.png)
