@@ -63,7 +63,7 @@ DC tree
     - [1.3.6.1.4.1.34601](https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers)
     - IANA  
 
-Note: how is this guy? well it is us :)
+Note: who is this guy? well it is us :)
 
 +++
 
