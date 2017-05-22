@@ -98,4 +98,4 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 ---
 
   Figure 1.3: ldap message  
-![Figure 2.3: LDAP message](intro_ldap_message.png)
+---?image=intro_ldap_message.png
