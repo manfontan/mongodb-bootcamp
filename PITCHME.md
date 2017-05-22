@@ -71,7 +71,7 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
   - *authenticate*:
     - username passwords - UTF-8 -> [SASLprep](https://tools.ietf.org/pdf/rfc4013.pdf)
 
----
++++
 
 ### Unbind Operation
 
@@ -80,7 +80,7 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
  the name implies. The naming of these operations are historical.
  The Unbind operation should be thought of as the **"quit"** operation.
 
----
++++
 
 ### Search Operation
 
