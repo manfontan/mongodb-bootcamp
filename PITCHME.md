@@ -99,7 +99,9 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 
 ### Search Operation
 
-- LDAP flavors  
+---
+
+### LDAP flavors  
 [Server implementations](https://en.wikipedia.org/wiki/List_of_LDAP_software#Server_software)
 
 ---
@@ -110,9 +112,9 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 ---
 
   Figure 1.2: DC tree  
----?image=intro_dctree.png
++++?image=intro_dctree.png
 
 ---
 
-  Figure 1.3: ldap message  
----?image=intro_ldap_message.png
+  Figure 1.3: ldap message
++++?image=intro_ldap_message.png
