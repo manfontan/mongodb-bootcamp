@@ -150,11 +150,17 @@ Openldap
 
 +++
 
-AWS AD
+[Testing AD]{https://wiki.mongodb.com/display/KB/Using+LDAP%2C+LDAPS+and+AD+for+Testing}
+
+Note:
+This is a AWS instance.
 
 +++
 
-Drivers Openldap
+[Drivers Openldap](https://wiki.mongodb.com/display/DI/Testing+LDAP)
+
+Note:
+This is a openldap server deployed on ny office, only accessible using the VPN.
 
 +++
 
