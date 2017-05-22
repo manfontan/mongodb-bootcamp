@@ -160,6 +160,12 @@ Drivers Openldap
 
 Training Vagrant files
 
++++
+
+- Tools  
+  - mongoldap
+  - ldapsearch
+
 ---
 
   Figure 1.3: ldap message
