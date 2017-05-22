@@ -1,6 +1,8 @@
-###LDAP NOTES - MONGODB BOOTCAMP
+##LDAP NOTES - MONGODB BOOTCAMP
 
-#### What is LDAP  
+---
+
+### What is LDAP  
 LDAP stands for Lightweight Directory Access Protocol.
 
 ---
@@ -24,7 +26,7 @@ LDAP stands for Lightweight Directory Access Protocol.
 
 ---
 
-##### Why Use LDAP?
+### Why Use LDAP?
 
   - Lightweight  
   - Public Standard [rfc4510](https://tools.ietf.org/pdf/rfc4510.pdf)  
@@ -33,10 +35,12 @@ LDAP stands for Lightweight Directory Access Protocol.
 
 ---
 
-##### Understanding LDAP Schema  
+### Understanding LDAP Schema  
+
   - OIDs:  
     - [1.3.6.1.4.1.34601](https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers)
     - IANA  
+
 
 ---
 
@@ -48,7 +52,7 @@ LDAP stands for Lightweight Directory Access Protocol.
 
 ---
 
-#### Bind Operation  
+### Bind Operation  
 
   The function of the Bind operation is to allow authentication
  information to be exchanged between the client and server.
@@ -68,7 +72,7 @@ LDAP stands for Lightweight Directory Access Protocol.
 
 ---
 
-5. Unbind Operation
+### Unbind Operation
 
   The function of the Unbind operation is to terminate an LDAP session.
  The Unbind operation is not the antithesis of the Bind operation as
@@ -77,7 +81,7 @@ LDAP stands for Lightweight Directory Access Protocol.
 
 ---
 
-6. Search Operation
+### Search Operation
 
 - LDAP flavors  
 [Server implementations](https://en.wikipedia.org/wiki/List_of_LDAP_software#Server_software)
