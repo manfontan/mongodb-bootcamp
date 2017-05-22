@@ -37,14 +37,9 @@ DC tree
 
 +++?image=assets/intro_dctree.png
 
-
 +++
 
-  - A: Access
-
-+++
-
-  - P: Protocol  
+  - AP: Access Protocol  
     - not server(implementation of the protocol) as many refer to it.  
     - [IETF](http://www.ietf.org/) Standard Track protocol and is specified in "Lightweight Directory Access Protocol (LDAP) Technical Specification Road Map" [RFC4510](http://www.rfc-editor.org/rfc/rfc4510.txt)  
 
@@ -55,9 +50,13 @@ DC tree
 
 ### Why Use LDAP?
 
++++  
   - Lightweight  
++++  
   - Public Standard [rfc4510](https://tools.ietf.org/pdf/rfc4510.pdf)  
++++  
   - Mature  
++++  
   - Security  
 
 ---
