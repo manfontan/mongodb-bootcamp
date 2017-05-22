@@ -71,8 +71,9 @@ DC tree
     - [1.3.6.1.4.1.34601](https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers)
     - [IANA](https://www.iana.org/about)  
 
-Note: who is this guy? well it is us :)  
-Note: IANA internet assigned numbers authority
+Note:
+who is this guy? well it is us :).
+IANA internet assigned numbers authority.
 
 +++
 
