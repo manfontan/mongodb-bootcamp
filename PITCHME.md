@@ -63,6 +63,8 @@ DC tree
     - [1.3.6.1.4.1.34601](https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers)
     - IANA  
 
+Note: how is this guy? well it is us :)
+
 +++
 
   - There are a number of different types of elements that may comprise an LDAP schema. Every LDAP schema must include the following elements:
