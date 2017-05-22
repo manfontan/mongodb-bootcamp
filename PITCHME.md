@@ -60,11 +60,11 @@ LDAP stands for Lightweight Directory Access Protocol.
 
 +++
 
-  - **Attribute types&** define named units of information that may be stored in entries.   
+  - **Attribute types** define named units of information that may be stored in entries.   
 
 +++
 
-    - **Object classes** define named collections of attribute types which may be used in entries containing that class, and which of those attribute types will be required rather than optional.  
+  - **Object classes** define named collections of attribute types which may be used in entries containing that class, and which of those attribute types will be required rather than optional.  
 
 ---
 
