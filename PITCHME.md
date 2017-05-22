@@ -19,6 +19,19 @@ LDAP stands for Lightweight Directory Access Protocol.
 
 +++
 
+Figure 1.1: LDAP directory tree(traditional naming):  
+
++++?image=intro_tree.png  
+
++++
+
+Figure 1.2: DC tree  
+
++++?image=intro_dctree.png
+
+
++++
+
   - A: Access
 
 +++
@@ -26,7 +39,7 @@ LDAP stands for Lightweight Directory Access Protocol.
   - P: Protocol  
     - not server(implementation of the protocol) as many refer to it.  
     - [IETF](http://www.ietf.org/) Standard Track protocol and is specified in "Lightweight Directory Access Protocol (LDAP) Technical Specification Road Map" [RFC4510](http://www.rfc-editor.org/rfc/rfc4510.txt)  
-      
+
     **Understand the protocol to solve server issues**
 
 
@@ -107,16 +120,6 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 
 ### LDAP flavors  
 [Server implementations](https://en.wikipedia.org/wiki/List_of_LDAP_software#Server_software)
-
----
-
-  Figure 1.1: LDAP directory tree(traditional naming):  
-+++?image=intro_tree.png
-
----
-
-  Figure 1.2: DC tree  
-+++?image=intro_dctree.png
 
 ---
 
