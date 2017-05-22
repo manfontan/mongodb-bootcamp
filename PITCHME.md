@@ -1,4 +1,4 @@
-#LDAP NOTES - MONGODB BOOTCAMP
+###LDAP NOTES - MONGODB BOOTCAMP
 
 1. What is LDAP  
 LDAP stands for Lightweight Directory Access Protocol.
@@ -13,12 +13,16 @@ LDAP stands for Lightweight Directory Access Protocol.
   - P: Protocol, not a server(implementation of the protocol) as many refer to it.
   Understand the protocol to solve server issues. [IETF](http://www.ietf.org/) Standard Track protocol and is specified in "Lightweight Directory Access Protocol (LDAP) Technical Specification Road Map" [RFC4510](http://www.rfc-editor.org/rfc/rfc4510.txt)  
 
+---
+
 2. Why Use LDAP?
 
   - Lightweight  
   - Public Standard [rfc4510](https://tools.ietf.org/pdf/rfc4510.pdf)  
   - Mature  
   - Security  
+
+---
 
 3. Understanding LDAP Schema  
   - OIDs:  
@@ -30,6 +34,8 @@ LDAP stands for Lightweight Directory Access Protocol.
       - Matching rules define the kinds of comparisons that can be performed against LDAP data.  
       - Attribute types define named units of information that may be stored in entries.   
       - Object classes define named collections of attribute types which may be used in entries containing that class, and which of those attribute types will be required rather than optional.  
+
+---
 
 4. Bind Operation  
 
@@ -45,6 +51,8 @@ LDAP stands for Lightweight Directory Access Protocol.
     - *authenticate*:
       - username passwords - UTF-8 -> [SASLprep](https://tools.ietf.org/pdf/rfc4013.pdf)
 
+---
+
 5. Unbind Operation
 
   The function of the Unbind operation is to terminate an LDAP session.
@@ -52,17 +60,24 @@ LDAP stands for Lightweight Directory Access Protocol.
  the name implies. The naming of these operations are historical.
  The Unbind operation should be thought of as the **"quit"** operation.
 
+---
+
 6. Search Operation
 
 - LDAP flavors  
 [Server implementations](https://en.wikipedia.org/wiki/List_of_LDAP_software#Server_software)
 
+---
 
   Figure 1.1: LDAP directory tree(traditional naming):  
 ![Figure 1.1: LDAP directory tree(traditional naming)](intro_tree.png)
 
+---
+
   Figure 1.2: DC tree  
   ![Figure 1.2: DC tree](intro_dctree.png)
+
+---
 
   Figure 1.3: ldap message  
   ![Figure 2.3: LDAP message](intro_ldap_message.png)
