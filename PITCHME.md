@@ -27,13 +27,13 @@ LDAP stands for Lightweight Directory Access Protocol.
 
 LDAP directory tree(traditional naming)  
 
-+++?image=intro_tree.png  
++++?image=assets/intro_tree.png  
 
 +++
 
 DC tree  
 
-+++?image=intro_dctree.png
++++?image=assets/intro_dctree.png
 
 
 +++
@@ -132,7 +132,7 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 ---
 
   Figure 1.3: ldap message
-+++?image=intro_ldap_message.png
++++?image=assets/intro_ldap_message.png
 
 ---
 
