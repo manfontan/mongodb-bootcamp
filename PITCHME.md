@@ -107,7 +107,7 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 ---
 
   Figure 1.1: LDAP directory tree(traditional naming):  
-![Figure 1.1: LDAP directory tree(traditional naming)](intro_tree.png)
++++?image=intro_tree.png
 
 ---
 
