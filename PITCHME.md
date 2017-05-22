@@ -123,10 +123,17 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 
 ### Reference
 - [Lightweight Directory Access Protocol (LDAP)](https://tools.ietf.org/pdf/rfc4511.pdf)  
+
 - [Mongodb 3.4 LDAP docs](https://docs.mongodb.com/manual/core/security-ldap/)  
+
 - [IANA enterprise numbers](https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers)  
+
 - [mongoldap](https://docs.mongodb.com/manual/reference/program/mongoldap/)  
+
 - [Basic LDAP Concepts](https://www.ldap.com/basic-ldap-concepts)  
+
 - [Openldap Admin guide](http://www.openldap.org/doc/admin24/)  
+
 - [List of LDAP software](https://en.wikipedia.org/wiki/List_of_LDAP_software#Server_software)  
+
 - [GitPitch](https://github.com/gitpitch/gitpitch/wiki/Slide-Delimiters)  
