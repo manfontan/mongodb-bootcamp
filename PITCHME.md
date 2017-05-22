@@ -1,6 +1,6 @@
 ###LDAP NOTES - MONGODB BOOTCAMP
 
-1. What is LDAP  
+#### What is LDAP  
 LDAP stands for Lightweight Directory Access Protocol.
 
 ---
@@ -24,7 +24,7 @@ LDAP stands for Lightweight Directory Access Protocol.
 
 ---
 
-2. Why Use LDAP?
+##### Why Use LDAP?
 
   - Lightweight  
   - Public Standard [rfc4510](https://tools.ietf.org/pdf/rfc4510.pdf)  
@@ -33,10 +33,12 @@ LDAP stands for Lightweight Directory Access Protocol.
 
 ---
 
-3. Understanding LDAP Schema  
+##### Understanding LDAP Schema  
   - OIDs:  
     - [1.3.6.1.4.1.34601](https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers)
     - IANA  
+
+---
 
     - There are a number of different types of elements that may comprise an LDAP schema. Every LDAP schema must include the following elements:
       - Attribute syntaxes define the types of data that can be represented in a directory server.  
@@ -46,11 +48,15 @@ LDAP stands for Lightweight Directory Access Protocol.
 
 ---
 
-4. Bind Operation  
+#### Bind Operation  
 
   The function of the Bind operation is to allow authentication
  information to be exchanged between the client and server.
+
+---
+
   The Bind operation should be thought of as the **"authenticate"** operation.
+
     - *version*: no negotiation, if the server does not support the version will  
     send a protocolError on the BindResponse.
 
