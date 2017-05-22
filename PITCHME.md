@@ -3,13 +3,22 @@
 1. What is LDAP  
 LDAP stands for Lightweight Directory Access Protocol.
 
+---
+
   - L: lightweight, why?
     - Even though the “lightweight” moniker is primarily intended as a comparison to its predecessor, the X.500 ([ISO/IEC 9594-1](http://www.itu.int/rec/T-REC-X.500-201210-S)) Directory Access Protocol, LDAP really is lightweight compared with just about any other TCP-based protocol
+
+---
+
   - D: directory, what is it?
     - The Directory is "a collection of open systems cooperating to provide
  directory services"
     - A directory is a specialized database specifically designed for searching and browsing, in additional to supporting basic lookup and update functions.
+---
+
   - A: Access
+
+---
   - P: Protocol, not a server(implementation of the protocol) as many refer to it.
   Understand the protocol to solve server issues. [IETF](http://www.ietf.org/) Standard Track protocol and is specified in "Lightweight Directory Access Protocol (LDAP) Technical Specification Road Map" [RFC4510](http://www.rfc-editor.org/rfc/rfc4510.txt)  
 
