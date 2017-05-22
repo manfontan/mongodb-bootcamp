@@ -97,6 +97,10 @@ IANA internet assigned numbers authority.
 
 ---
 
+### Some LDAP Operations
+
++++
+
 ### Bind Operation  
 
   The function of the Bind operation is to allow authentication
