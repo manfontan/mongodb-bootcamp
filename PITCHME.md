@@ -150,7 +150,7 @@ Openldap
 
 +++
 
-[Testing AD]{https://wiki.mongodb.com/display/KB/Using+LDAP%2C+LDAPS+and+AD+for+Testing}
+[Testing AD](https://wiki.mongodb.com/display/KB/Using+LDAP%2C+LDAPS+and+AD+for+Testing)
 
 Note:
 This is a AWS instance.
