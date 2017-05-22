@@ -43,7 +43,7 @@ LDAP stands for Lightweight Directory Access Protocol.
     - [1.3.6.1.4.1.34601](https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers)
     - IANA  
 
----
++++
 
   - There are a number of different types of elements that may comprise an LDAP schema. Every LDAP schema must include the following elements:
     - Attribute syntaxes define the types of data that can be represented in a directory server.  
@@ -58,7 +58,7 @@ LDAP stands for Lightweight Directory Access Protocol.
   The function of the Bind operation is to allow authentication
  information to be exchanged between the client and server.
 
----
++++
 
 The **Bind operation** should be thought of as the **"authenticate"** operation.
 
