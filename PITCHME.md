@@ -39,6 +39,7 @@ LDAP stands for Lightweight Directory Access Protocol.
 
 ### Understanding LDAP Schema  
 
+
 +++
 
   - OIDs:  
@@ -109,7 +110,7 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 ---
 
   Figure 1.2: DC tree  
-![Figure 1.2: DC tree](intro_dctree.png)
+?image=intro_dctree.png
 
 ---
 
