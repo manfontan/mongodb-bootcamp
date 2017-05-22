@@ -58,16 +58,16 @@ LDAP stands for Lightweight Directory Access Protocol.
 
 ---
 
-  The Bind operation should be thought of as the **"authenticate"** operation.
+The **Bind operation** should be thought of as the **"authenticate"** operation.
 
-    - *version*: no negotiation, if the server does not support the version will  
+  - *version*: no negotiation, if the server does not support the version will  
     send a protocolError on the BindResponse.
 
-    - *name*: Name of the Directory Object that the client wants to bind as.  
+  - *name*: Name of the Directory Object that the client wants to bind as.  
      Empty for anonymous binds and SASL auth.
 
-    - *authenticate*:
-      - username passwords - UTF-8 -> [SASLprep](https://tools.ietf.org/pdf/rfc4013.pdf)
+  - *authenticate*:
+    - username passwords - UTF-8 -> [SASLprep](https://tools.ietf.org/pdf/rfc4013.pdf)
 
 ---
 
