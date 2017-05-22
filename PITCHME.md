@@ -1,5 +1,10 @@
 ##LDAP NOTES - MONGODB BOOTCAMP
 
++++
+
+### Resources
+[github repo](https://github.com/manfontan/mongodb-bootcamp)
+[online slides](https://gitpitch.com/manfontan/mongodb-bootcamp)
 ---
 
 ### What is LDAP?  
