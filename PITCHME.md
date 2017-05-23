@@ -182,8 +182,8 @@ Training Vagrant files
 
 +++
 
-  - Ask Emilio :)
-    [Ops Manager and LDAP](https://docs.google.com/presentation/d/1ka0gm-ErzcnwBFj_vcdLKC5Of_bKBhvx15TFaSWVJas/edit#slide=id.p4)
+  - Ask Emilio :)  
+    [Ops Manager and LDAP](https://docs.google.com/presentation/d/1ka0gm-ErzcnwBFj_vcdLKC5Of_bKBhvx15TFaSWVJas/edit#slide=id.p4)  
 
 ---
 
