@@ -15,15 +15,17 @@ LDAP stands for Lightweight Directory Access Protocol.
 
 +++
 
-  - L: lightweight, why?
-    - Even though the “lightweight” moniker is primarily intended as a comparison to its predecessor, the X.500 ([ISO/IEC 9594-1](http://www.itu.int/rec/T-REC-X.500-201210-S)) Directory Access Protocol, LDAP really is lightweight compared with just about any other TCP-based protocol
+  - **L**: lightweight, why?
+    - Even though the “lightweight” moniker is primarily intended as a comparison to its predecessor, the X.500 ([ISO/IEC 9594-1](http://www.itu.int/rec/T-REC-X.500-201210-S)) Directory Access Protocol, LDAP really is lightweight compared with just about any other TCP-based protocols.
 
 +++
 
-  - D: directory, what is it?
+  - **D**: directory, what is it?
     - The Directory is "a collection of open systems cooperating to provide
  directory services"
     - A directory is a specialized database specifically designed for searching and browsing, in additional to supporting basic lookup and update functions.
+
+Note: NoSQL database actually :).
 
 +++
 
@@ -39,7 +41,7 @@ DC tree
 
 +++
 
-  - AP: Access Protocol  
+  - **AP**: Access Protocol  
     - not server(implementation of the protocol) as many refer to it.  
     - [IETF](http://www.ietf.org/) Standard Track protocol and is specified in "Lightweight Directory Access Protocol (LDAP) Technical Specification Road Map" [RFC4510](http://www.rfc-editor.org/rfc/rfc4510.txt)  
 
@@ -172,6 +174,14 @@ Training Vagrant files
   - mongoldap
   - ldapsearch
 
++++
+
+  - OM
+    +++?image=assets/emilio.png
+
+    - Ask Emilio :)
+    [Ops Manager and LDAP](https://docs.google.com/presentation/d/1ka0gm-ErzcnwBFj_vcdLKC5Of_bKBhvx15TFaSWVJas/edit#slide=id.p4)
+
 ---
 
   Figure 1.3: ldap message
@@ -193,3 +203,4 @@ Training Vagrant files
 - [Openldap Admin guide](http://www.openldap.org/doc/admin24/)  
 - [List of LDAP software](https://en.wikipedia.org/wiki/List_of_LDAP_software#Server_software)  
 - [GitPitch](https://github.com/gitpitch/gitpitch/wiki/Slide-Delimiters)  
+- [Ops Manager and LDAP](https://docs.google.com/presentation/d/1ka0gm-ErzcnwBFj_vcdLKC5Of_bKBhvx15TFaSWVJas/edit#slide=id.p4)
