@@ -82,19 +82,30 @@ IANA internet assigned numbers authority.
 
 +++
 
-  - **Attribute syntaxes** define the types of data that can be represented in a directory server.  
+  - **Attribute syntaxes** define the types of data that can be represented in a directory server.
+    - [RFC 4517](https://tools.ietf.org/pdf/rfc4517.pdf)
 
 +++
 
   - **Matching rules** define the kinds of comparisons that can be performed against LDAP data.  
+    - [RFC 4517](https://tools.ietf.org/pdf/rfc4517.pdf)
 
 +++
 
-  - **Attribute types** define named units of information that may be stored in entries.   
+  - **Attribute types** define named units of information that may be stored in entries.
+      - [RFC 4519](https://tools.ietf.org/pdf/rfc4519.pdf)
+      - 'cn','dc','member', 'o', 'ou', 'uniqueMember'...
+
+Note:  
+memberOf is not defined by the protocol.  
+cn - country name, dc - domain component, organization, organization unit
 
 +++
 
   - **Object classes** define named collections of attribute types which may be used in entries containing that class, and which of those attribute types will be required rather than optional.  
+    - [RFC 4519](https://tools.ietf.org/pdf/rfc4519.pdf)
+    - 'groupOfNames', 'groupOfUniqueNames','locality'...
+
 
 ---
 
@@ -148,6 +159,12 @@ Openldap
 
 ---
 
+### MongoDB and LDAP
+
+  - Authentication and Authorization
+
+---
+
 ### MongoDB LDAP Testing
 
 +++
@@ -178,13 +195,13 @@ Training Vagrant files
 
   - OM  
 
-+++?image=assets/emilio.png
-
 +++
 
   - Ask Emilio :)  
-  
+
     [Ops Manager and LDAP](https://docs.google.com/presentation/d/1ka0gm-ErzcnwBFj_vcdLKC5Of_bKBhvx15TFaSWVJas/edit#slide=id.p4)  
+
++++?image=assets/emilio.png
 
 ---
 
