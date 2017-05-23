@@ -181,6 +181,8 @@ Openldap
 ### MongoDB and LDAP
 
   - Authentication and Authorization
+  - [M034 Chapter 3](https://university.mongodb.com/mercury/M034/2016_ondemand_v1/courseware/Chapter_3_LDAP_Authorization)
+  - [M310 Chapter 1](https://university.mongodb.com/courses/MongoDB/M310/2017_ondemand_v32/courseware/Chapter_1_Authentication)
 
 ---
 
@@ -235,7 +237,7 @@ Training Vagrant files
 
 +++
 
-### Than you for your time 
+### Than you for your time
 
 ---
 
