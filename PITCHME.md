@@ -176,8 +176,8 @@ Training Vagrant files
 
 +++
 
-  - OM
-    +++?image=assets/emilio.png
+  - OM  
+  +++?image=assets/emilio.png
 
     - Ask Emilio :)
     [Ops Manager and LDAP](https://docs.google.com/presentation/d/1ka0gm-ErzcnwBFj_vcdLKC5Of_bKBhvx15TFaSWVJas/edit#slide=id.p4)
