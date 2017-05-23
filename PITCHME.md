@@ -123,7 +123,7 @@ cn - country name, dc - domain component, organization, organization unit
 
   - **Object classes** define named collections of attribute types which may be used in entries containing that class, and which of those attribute types will be required rather than optional.  
     - [RFC 4519](https://tools.ietf.org/pdf/rfc4519.pdf)
-    - 'groupOfNames', 'groupOfUniqueNames','locality'...
+    - 'groupOfNames', 'groupOfUniqueNames', 'locality'...
 
 
 ---
@@ -230,6 +230,12 @@ Training Vagrant files
 ---
 
 # Q&A
+
++++?image=assets/ricardo.png
+
++++
+
+### Than you for your time 
 
 ---
 
