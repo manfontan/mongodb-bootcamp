@@ -24,6 +24,8 @@ LDAP stands for Lightweight Directory Access Protocol.
     - The Directory is "a collection of open systems cooperating to provide
  directory services"
     - A directory is a specialized database specifically designed for searching and browsing, in additional to supporting basic lookup and update functions.
+    - [RFC 4512](https://tools.ietf.org/pdf/rfc4512.pdf)
+
 
 Note: NoSQL database actually :).
 
@@ -83,12 +85,29 @@ IANA internet assigned numbers authority.
 +++
 
   - **Attribute syntaxes** define the types of data that can be represented in a directory server.
+    - Attribute type description, Bit String, Boolean, Generalized Time, JPEG...
+    - ```( 1.3.6.1.4.1.1466.115.121.1.7 DESC ’Boolean’ )```
     - [RFC 4517](https://tools.ietf.org/pdf/rfc4517.pdf)
+
+Note:  
+Servers SHOULD recognize all the syntaxes listed in this document, but are not required to otherwise support them, and MAY recognise or support other syntaxes.  
+This representation is referred to as the LDAP-specific encoding to distinguish it from other methods of encoding attribute values Ex. BER X.500.  
+Clients MUST NOT assume that the LDAP-specific encoding of a value of an unrecognized syntax is a human-readable character string.
+
++++?image=assets/attributesyntax.png
 
 +++
 
   - **Matching rules** define the kinds of comparisons that can be performed against LDAP data.  
+    - uniqueMemberMatch, bitStringMatch, booleanMatch,...
     - [RFC 4517](https://tools.ietf.org/pdf/rfc4517.pdf)
+
+Note:
+A matching rule evaluates to TRUE, and in some cases Undefined, as specified in the description of the matching rule; otherwise, it evaluates to FALSE.
+
++++?image=assets/matchingrules1.png
+
++++?image=assets/matchingrules2.png
 
 +++
 
