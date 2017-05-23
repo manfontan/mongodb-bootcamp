@@ -217,6 +217,10 @@ Training Vagrant files
 
 +++
 
+ - Understanding [MongoDB LDAP configuration](https://docs.mongodb.com/manual/core/security-ldap-external/#configuration)
+
++++
+
   - OM  
 
 +++
