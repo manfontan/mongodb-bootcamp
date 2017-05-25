@@ -1,4 +1,4 @@
 background-size : contain
-footnote: "{name : Manuel Fontan , email : manuel.fontan@mongodb.com , location : Dublin IE}"
+footnote: "{name : Manuel Fontan , org: MongoDB , location : Dublin IE}"
 logo: assets/mongodb-logo.jpg
 revealjs: 3.4.1
