@@ -211,7 +211,7 @@ Microsoft AD
 
 +++
 
-<img src="assets/openldap-logo.png" width="150">
+<img src="assets/openldap-logo.png" width="150" style="border-style: none">
 
 [Openldap](http://www.openldap.org/)
 
@@ -221,7 +221,7 @@ Microsoft AD
 
 +++
 
-<img src="assets/opendj-logo.png" width="150">
+<img src="assets/opendj-logo.png" width="150" style="border-style: none">
 
 [OpenDJ](https://backstage.forgerock.com/docs/opendj/2.8.0/server-dev-guide/preface)
 
