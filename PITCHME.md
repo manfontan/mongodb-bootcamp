@@ -56,6 +56,11 @@ DC tree
 
 +++  
   - Lightweight  
+
+Note:
+  2048 certs are ok, since they are renewed yearly. 4096 Certs slow the
+  handshake process and might lead to issues.
+
 +++  
   - Public Standard [rfc4510](https://tools.ietf.org/pdf/rfc4510.pdf)  
 +++  
@@ -165,6 +170,36 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 
 ---
 
+### LDAP Data Interchange Format (LDIF)
+
+  - [RFC 2849](https://tools.ietf.org/pdf/rfc2849.pdf)
+
+  - LDIF is typically used:
+    - to import and export directory information between LDAP-based directory servers
+    - to describe a set of changes which are to be applied to a directory.
+
++++
+
+```
+## certs.ldif
+dn: cn=config
+changetype: modify
+add: olcTLSCACertificateFile
+olcTLSCACertificateFile: /etc/openldap/certs/mongodbca.crt
+-
+replace: olcTLSCertificateFile
+olcTLSCertificateFile: /etc/openldap/certs/mongodbserver.crt
+-
+replace: olcTLSCertificateKeyFile
+olcTLSCertificateKeyFile: /etc/openldap/certs/mongodbserver.key
+```  
++++
+
+```
+# ldapmodify -Y EXTERNAL -H ldapi:/// -f certs.ldif
+```
+---
+
 ### LDAP flavors  
 [Server implementations](https://en.wikipedia.org/wiki/List_of_LDAP_software#Server_software)
 
@@ -175,6 +210,7 @@ Microsoft AD
 +++
 
 Openldap
+
 
 ---
 
