@@ -209,6 +209,8 @@ olcTLSCertificateKeyFile: /etc/openldap/certs/mongodbserver.key
 
 +++
 
+<img src="assets/ad-logo.jpg" width="150" height="100" style="border-style: none">
+
 Microsoft AD
 
 +++
