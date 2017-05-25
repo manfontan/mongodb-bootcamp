@@ -180,6 +180,8 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 
 +++
 
+#### Update Openldap certs using ldif
+
 ```
 ## certs.ldif
 dn: cn=config
@@ -209,7 +211,23 @@ Microsoft AD
 
 +++
 
-Openldap
+<img src="assets/openldap-logo.png" width="150">
+
+[Openldap](http://www.openldap.org/)
+
++++
+
+389 Directory Server
+
++++
+
+<img src="assets/opendj-logo.png" width="150">
+
+[OpenDJ](https://backstage.forgerock.com/docs/opendj/2.8.0/server-dev-guide/preface)
+
++++
+
+ApacheDS
 
 
 ---
