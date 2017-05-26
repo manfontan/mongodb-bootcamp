@@ -1,11 +1,14 @@
 
+This is a dummy java client to connect to [MongoSecurityPlaypen](https://github.com/pkdone/MongoSecurityPlaypen) mongodb.
 
-### generate the maven archetype
+### generate the maven archetype (optional)
+This is not required unless you want to write the client from the scratch
+
 ```
 mvn archetype:generate -DgroupId=com.mgdbbootcamp.test -DartifactId=mongodbtest -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 ```
 
-### add pom dependencies
+### add pom dependencies (optional)
 ```
 <dependency>
   <groupId>org.mongodb</groupId>
@@ -15,7 +18,7 @@ mvn archetype:generate -DgroupId=com.mgdbbootcamp.test -DartifactId=mongodbtest 
 </dependency>
 ```
 
-### add pom plugins
+### add pom plugin (optional)
 ```
 <plugin>
   <groupId>org.apache.maven.plugins</groupId>
@@ -51,6 +54,8 @@ mvn archetype:generate -DgroupId=com.mgdbbootcamp.test -DartifactId=mongodbtest 
   </configuration>
 </plugin>
 ```
+### Run the App
+
 ### complie the App
 ```
 $mvn package
@@ -60,7 +65,7 @@ or
 $mvn compile
 ```
 
-### run the App
+### execute the App
 ```
  mvn exec:java
 ```
