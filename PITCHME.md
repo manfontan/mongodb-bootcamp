@@ -21,15 +21,17 @@ LDAP stands for Lightweight Directory Access Protocol.
 +++
 
   - **D**: directory, what is it?
+    - A directory is a specialized database specifically designed for searching and browsing, in additional to supporting basic lookup and update functions.
     - The Directory is "a collection of open systems cooperating to provide
  directory services"
-    - A directory is a specialized database specifically designed for searching and browsing, in additional to supporting basic lookup and update functions.
     - [RFC 4512](https://tools.ietf.org/pdf/rfc4512.pdf)
 
 
 Note: NoSQL database actually :).
 
 +++
+
+Who does it look?
 
 LDAP directory tree(traditional naming)  
 
@@ -58,13 +60,18 @@ DC tree
   - Lightweight  
 
 Note:
-  2048 certs are ok, since they are renewed yearly. 4096 Certs slow the
+  - binary ASN.1 syntax that is used to encode LDAP messages is both very compact and very efficient to parse, especially when compared with text-based protocols like HTTP where the data being transferred is often further bloated by being formatted in XML or JSON.
+  - 2048 certs are ok, since they are renewed yearly. 4096 Certs slow the
   handshake process and might lead to issues.
 
 +++  
   - Public Standard [rfc4510](https://tools.ietf.org/pdf/rfc4510.pdf)  
 +++  
   - Mature  
+
+Note:
+ - LDAP has been around since the early 1990s and is a simplified subset of X.500 which has been around since the 1980s.
+
 +++  
   - Security  
 
@@ -75,9 +82,10 @@ Note:
 
 +++
 
-  - OIDs:  
+  - Naming convention OIDs:  
     - [1.3.6.1.4.1.34601](https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers)
     - [IANA](https://www.iana.org/about)  
+    - [OID reference](https://www.ldap.com/ldap-oid-reference)
 
 Note:
 who is this guy? well it is us :).  
