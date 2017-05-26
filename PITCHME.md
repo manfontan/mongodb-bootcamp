@@ -52,7 +52,7 @@ DC tree
     **Understand the protocol to solve server issues**
 
 
----
++++
 
 ### Why Use LDAP?
 
@@ -74,6 +74,40 @@ Note:
 
 +++  
   - Security  
+
++++
+
+  ### LDAP flavors  
+  [Server implementations](https://en.wikipedia.org/wiki/List_of_LDAP_software#Server_software)
+
+  +++
+
+  <img src="assets/ad-logo.jpg" width="150" height="100" style="border-style: none">
+
+  Microsoft AD
+
+  +++
+
+  <img src="assets/openldap-logo.png" width="150" style="border-style: none">
+
+  [Openldap](http://www.openldap.org/)
+
+  +++
+
+  389 Directory Server
+
+  +++
+
+  <img src="assets/opendj-logo.png" width="150" style="border-style: none">
+
+  [OpenDJ](https://backstage.forgerock.com/docs/opendj/2.8.0/server-dev-guide/preface)
+
+  +++
+
+  ApacheDS
+
+
+  ---
 
 ---
 
@@ -139,7 +173,7 @@ cn - country name, dc - domain component, organization, organization unit
     - 'groupOfNames', 'groupOfUniqueNames', 'locality'...
 
 
----
++++
 
 ### Some LDAP Operations
 
@@ -176,7 +210,7 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 
 ### Search Operation
 
----
++++
 
 ### LDAP Data Interchange Format (LDIF)
 
@@ -210,52 +244,35 @@ olcTLSCertificateKeyFile: /etc/openldap/certs/mongodbserver.key
 ```
 # ldapmodify -Y EXTERNAL -H ldapi:/// -f certs.ldif
 ```
----
-
-### LDAP flavors  
-[Server implementations](https://en.wikipedia.org/wiki/List_of_LDAP_software#Server_software)
-
-+++
-
-<img src="assets/ad-logo.jpg" width="150" height="100" style="border-style: none">
-
-Microsoft AD
-
-+++
-
-<img src="assets/openldap-logo.png" width="150" style="border-style: none">
-
-[Openldap](http://www.openldap.org/)
-
-+++
-
-389 Directory Server
-
-+++
-
-<img src="assets/opendj-logo.png" width="150" style="border-style: none">
-
-[OpenDJ](https://backstage.forgerock.com/docs/opendj/2.8.0/server-dev-guide/preface)
-
-+++
-
-ApacheDS
-
-
----
 
 ### MongoDB and LDAP
 
   - Authentication and Authorization
-    - [M310 Chapter 1](https://university.mongodb.com/courses/MongoDB/M310/2017_ondemand_v32/courseware/Chapter_1_Authentication)
-    - [M034 Chapter 3](https://university.mongodb.com/mercury/M034/2016_ondemand_v1/courseware/Chapter_3_LDAP_Authorization)
-    - [Mongodb 3.4 LDAP docs](https://docs.mongodb.com/manual/core/security-ldap/)
 
++++
 
+ ### Authorization Steps
+  - Auth
+  - Transformation
+  - Query
+  - Validation
+
++++?image=assets/directory-tree-test.png
+
++++
+
+  - [M310 Chapter 1](https://university.mongodb.com/courses/MongoDB/M310/2017_ondemand_v32/courseware/Chapter_1_Authentication)
+  - [M034 Chapter 3](https://university.mongodb.com/mercury/M034/2016_ondemand_v1/courseware/Chapter_3_LDAP_Authorization)
+  - [Mongodb 3.4 LDAP docs](https://docs.mongodb.com/manual/core/security-ldap/)
 
 ---
 
 ### MongoDB LDAP Testing
+
+
++++
+
+[Mongo Security Playpen](https://github.com/pkdone/MongoSecurityPlaypen)
 
 +++
 
@@ -273,13 +290,87 @@ This is a openldap server deployed on ny office, only accessible using the VPN.
 
 +++
 
-Training Vagrant files
-
-+++
-
 - Tools  
   - mongoldap
   - ldapsearch
+  - openssl s_client
+
++++
+
+```
+[vagrant@centralit ~]$ ldapsearch -x -W -H ldap://centralit/ -D "cn=Manager,dc=WizzyIndustries,dc=com" -b "dc=WizzyIndustries,dc=com" "(objectclass=*)"
+Enter LDAP Password:
+# extended LDIF
+#
+# LDAPv3
+# base <dc=WizzyIndustries,dc=com> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# WizzyIndustries.com
+dn: dc=WizzyIndustries,dc=com
+objectClass: dcObject
+objectClass: organization
+o: WizzyIndustries com
+dc: WizzyIndustries
+
+# Manager, WizzyIndustries.com
+dn: cn=Manager,dc=WizzyIndustries,dc=com
+objectClass: organizationalRole
+cn: Manager
+description: Directory Manager
+
+# Users, WizzyIndustries.com
+dn: ou=Users,dc=WizzyIndustries,dc=com
+objectClass: organizationalUnit
+ou: Users
+
+# Groups, WizzyIndustries.com
+dn: ou=Groups,dc=WizzyIndustries,dc=com
+objectClass: organizationalUnit
+ou: Groups
+
+# dbmaster, Users, WizzyIndustries.com
+dn: cn=dbmaster,ou=Users,dc=WizzyIndustries,dc=com
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: organizationalPerson
+cn: dbmaster
+sn: dbmaster
+uid: dbmaster
+userPassword:: e1NTSEF9NVd2SXdVNU84d0xQQnBRUHB1WFg5NEFFYmgrR2tWRHE=
+
+# jsmith, Users, WizzyIndustries.com
+dn: cn=jsmith,ou=Users,dc=WizzyIndustries,dc=com
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: organizationalPerson
+cn: jsmith
+sn: jsmith
+uid: jsmith
+userPassword:: e1NTSEF9RnJTMENydGJvenpqZDRVT0JPazYxZnI3bzhFaHFvdXM=
+
+# DBAdmin, Groups, WizzyIndustries.com
+dn: cn=DBAdmin,ou=Groups,dc=WizzyIndustries,dc=com
+objectClass: groupOfNames
+cn: DBAdmin
+member: cn=dbmaster,ou=Users,dc=WizzyIndustries,dc=com
+
+# AppReadOnly, Groups, WizzyIndustries.com
+dn: cn=AppReadOnly,ou=Groups,dc=WizzyIndustries,dc=com
+objectClass: groupOfNames
+cn: AppReadOnly
+member: cn=dbmaster,ou=Users,dc=WizzyIndustries,dc=com
+member: cn=jsmith,ou=Users,dc=WizzyIndustries,dc=com
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 9
+# numEntries: 8
+```
 
 +++
 
