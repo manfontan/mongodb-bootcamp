@@ -80,39 +80,35 @@ Note:
   ### LDAP flavors  
   [Server implementations](https://en.wikipedia.org/wiki/List_of_LDAP_software#Server_software)
 
-  +++
++++
 
   <img src="assets/ad-logo.jpg" width="150" height="100" style="border-style: none">
 
   Microsoft AD
 
-  +++
++++
 
   <img src="assets/openldap-logo.png" width="150" style="border-style: none">
 
   [Openldap](http://www.openldap.org/)
 
-  +++
++++
 
   389 Directory Server
 
-  +++
++++
 
   <img src="assets/opendj-logo.png" width="150" style="border-style: none">
 
   [OpenDJ](https://backstage.forgerock.com/docs/opendj/2.8.0/server-dev-guide/preface)
 
-  +++
++++
 
   ApacheDS
-
-
-  ---
 
 ---
 
 ### Understanding LDAP Schema  
-
 
 +++
 
