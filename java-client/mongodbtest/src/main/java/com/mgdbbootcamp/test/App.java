@@ -17,17 +17,15 @@ public class App
 {
 public static void main( String[] args )
 {
-        System.out.println("***************************Start*****************************");
-
         String user = "dbmaster";
         String password = "adminPa55wd123";
 
         /**** Connect to MongoDB ****/
         MongoClientURI uri = new MongoClientURI("mongodb://dbmaster:adminPa55wd123@192.168.14.102/?authSource=$external&authMechanism=PLAIN");
         MongoClient mongo = new MongoClient(uri);
-
+        mongo.close();
         /**** Done ****/
-        System.out.println("***************************Done*****************************");
+        System.out.println("you successfully connected using ldap: "+user);
 
 }
 }
