@@ -12,7 +12,7 @@ $mvn compile
 ```
 
 
-**(Wptional:)** If you want to create your client from the scratch:
+**(Optional:)** If you want to create your client from the scratch:
 
 ### generate the maven archetype (optional)
 This is not required unless you want to write the client from the scratch
