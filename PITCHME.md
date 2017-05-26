@@ -31,7 +31,7 @@ Note: NoSQL database actually :).
 
 +++
 
-Who does it look?
+How does it look?
 
 LDAP directory tree(traditional naming)  
 
