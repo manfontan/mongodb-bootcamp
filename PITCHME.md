@@ -241,17 +241,19 @@ olcTLSCertificateKeyFile: /etc/openldap/certs/mongodbserver.key
 # ldapmodify -Y EXTERNAL -H ldapi:/// -f certs.ldif
 ```
 
+---
+
 ### MongoDB and LDAP
 
   - Authentication and Authorization
 
 +++
 
- ### Authorization Steps
-  - Auth
-  - Transformation
-  - Query
-  - Validation
+  - Authorization Steps
+    - Auth
+    - Transformation
+    - Query
+    - Validation
 
 +++?image=assets/directory-tree-test.png
 
@@ -383,11 +385,6 @@ result: 0 Success
     [Ops Manager and LDAP](https://docs.google.com/presentation/d/1ka0gm-ErzcnwBFj_vcdLKC5Of_bKBhvx15TFaSWVJas/edit#slide=id.p4)  
 
 +++?image=assets/emilio.png
-
----
-
-  Figure 1.3: ldap message
-+++?image=assets/intro_ldap_message.png
 
 ---
 
