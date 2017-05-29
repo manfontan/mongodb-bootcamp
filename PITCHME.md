@@ -60,31 +60,16 @@ DC tree
 +++
 
 ![ADLOGO](assets/ad_logo.jpg)
-
-  Microsoft AD
-
-+++
-
 ![OPENLDAPLOGO](assets/openldap-logo.png)
-
-  [Openldap](http://www.openldap.org/)
-
-+++
-
 ![RHLDAPLOGO](assets/389logo.png)
-
-  [389 Directory Server](http://directory.fedoraproject.org/)
-
-+++
-
 ![OPENDJLOGO](assets/opendj-logo.png)
-
-  [OpenDJ](https://backstage.forgerock.com/docs/opendj/2.8.0/server-dev-guide/preface)
-
-+++
-
 ![apachedslogo](assets/apachedslogo.jpeg)
 
++++
+  Microsoft AD
+  [Openldap](http://www.openldap.org/)
+  [389 Directory Server](http://directory.fedoraproject.org/)
+  [OpenDJ](https://backstage.forgerock.com/docs/opendj/2.8.0/server-dev-guide/preface)
   [ApacheDS](http://directory.apache.org/apacheds/)
 
 +++
