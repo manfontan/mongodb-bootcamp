@@ -85,6 +85,7 @@ Note:
   Microsoft AD
 
   ![ADLOGO](assets/ad-logo.jpg)
+  
   asdf
 
 +++?image=assets/ad-log.jpg
