@@ -82,13 +82,13 @@ Note:
 
 +++
 
-  <img src="assets/ad-logo.jpg" width="150" height="100" style="border-style: none">
+  ![ADLOGO](assets/ad-logo.jpg)
 
   Microsoft AD
 
 +++
 
-  <img src="assets/openldap-logo.png" width="150" style="border-style: none">
+  ![OPENLDAPLOGO](assets/openldap-logo.png)
 
   [Openldap](http://www.openldap.org/)
 
@@ -98,8 +98,8 @@ Note:
 
 +++
 
-  <img src="assets/opendj-logo.png" width="150" style="border-style: none">
-
+  ![OPENDJLOGO](assets/opendj-logo.png)
+  
   [OpenDJ](https://backstage.forgerock.com/docs/opendj/2.8.0/server-dev-guide/preface)
 
 +++
@@ -265,9 +265,10 @@ olcTLSCertificateKeyFile: /etc/openldap/certs/mongodbserver.key
 
 +++
 
-  - [M310 Chapter 1](https://university.mongodb.com/courses/MongoDB/M310/2017_ondemand_v32/courseware/Chapter_1_Authentication)
-  - [M034 Chapter 3](https://university.mongodb.com/mercury/M034/2016_ondemand_v1/courseware/Chapter_3_LDAP_Authorization)
-  - [Mongodb 3.4 LDAP docs](https://docs.mongodb.com/manual/core/security-ldap/)
+  - Reference
+    - [M310 Chapter 1](https://university.mongodb.com/courses/MongoDB/M310/2017_ondemand_v32/courseware/Chapter_1_Authentication)
+    - [M034 Chapter 3](https://university.mongodb.com/mercury/M034/2016_ondemand_v1/courseware/Chapter_3_LDAP_Authorization)
+    - [Mongodb 3.4 LDAP docs](https://docs.mongodb.com/manual/core/security-ldap/)
 
 ---
 
