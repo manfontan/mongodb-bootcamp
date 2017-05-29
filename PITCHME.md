@@ -222,29 +222,6 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
     - to import and export directory information between LDAP-based directory servers
     - to describe a set of changes which are to be applied to a directory.
 
-+++
-
-#### Update Openldap certs using ldif
-
-```bash
-## certs.ldif
-dn: cn=config
-changetype: modify
-add: olcTLSCACertificateFile
-olcTLSCACertificateFile: /etc/openldap/certs/mongodbca.crt
--
-replace: olcTLSCertificateFile
-olcTLSCertificateFile: /etc/openldap/certs/mongodbserver.crt
--
-replace: olcTLSCertificateKeyFile
-olcTLSCertificateKeyFile: /etc/openldap/certs/mongodbserver.key
-```  
-+++
-
-```bash
-# ldapmodify -Y EXTERNAL -H ldapi:/// -f certs.ldif
-```
-
 ---
 
 ### MongoDB and LDAP
@@ -282,32 +259,37 @@ olcTLSCertificateKeyFile: /etc/openldap/certs/mongodbserver.key
 
 ### MongoDB LDAP Testing
 
++++
+
+### Testing environments
 
 +++
+
+- **Local testing**  
 
 [Mongo Security Playpen](https://github.com/pkdone/MongoSecurityPlaypen)
 
+Note:
+client, openldap server and mongodb 3.4.4 running on vms locally.
+
 +++
 
-[Testing AD](https://wiki.mongodb.com/display/KB/Using+LDAP%2C+LDAPS+and+AD+for+Testing)
+- **Testing LDAP Servers**
+
+  - [Testing AD](https://wiki.mongodb.com/display/KB/Using+LDAP%2C+LDAPS+and+AD+for+Testing)
+  - [Drivers Openldap](https://wiki.mongodb.com/display/DI/Testing+LDAP)
 
 Note:
 This is a AWS instance.
-
-+++
-
-[Drivers Openldap](https://wiki.mongodb.com/display/DI/Testing+LDAP)
-
-Note:
 This is a openldap server deployed on ny office, only accessible using the VPN.
 
 +++
 
 - **Tools**  
-  - ldapsearch
-  - mongoldap
-  - ldif
-  - openssl s_client
+  - [ldapsearch](https://linux.die.net/man/1/ldapsearch)
+  - [mongoldap](https://docs.mongodb.com/manual/reference/program/mongoldap/)
+  - [ldif](https://tools.ietf.org/pdf/rfc2849.pdf) -> [ldapmodify](https://linux.die.net/man/1/ldapmodify)
+  - [openssl s_client](https://wiki.openssl.org/index.php/Manual:S_client(1))
 
 +++?image=assets/directory-tree-test.png
 
@@ -397,6 +379,10 @@ result: 0 Success
 +++
 
 - **openssl**
+
++++
+
+- **ldapmodify**
 
 +++
 
