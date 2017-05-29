@@ -82,11 +82,9 @@ Note:
 
 +++
 
-  Microsoft AD
-
   ![ADLOGO](assets/ad-logo.jpg)
-  
-  asdf
+
+  Microsoft AD
 
 +++?image=assets/ad-log.jpg
 
@@ -261,7 +259,7 @@ olcTLSCertificateKeyFile: /etc/openldap/certs/mongodbserver.key
   - Authorization Steps
     - Authentication: Kerberos, LDAP, X509
     - Transformation:  
-      In order to match the credential formats between the authentication and authorization mechanisms, the user credentials may require a transformation step.
+    In order to match the credential formats between the authentication and authorization mechanisms, the user credentials may require a transformation step.
     - Query
     - Validation
 
