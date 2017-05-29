@@ -235,6 +235,8 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 
 ### MongoDB and LDAP
 
++++?image=assets/auth_diagram.png
+
 +++
 
   - Authentication
@@ -273,9 +275,9 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 - **Testing environments**
   - **Local testing**  
     - [Mongo Security Playpen](https://github.com/pkdone/MongoSecurityPlaypen)
-  - **Testing LDAP Servers**  
-    - [Testing AD](https://wiki.mongodb.com/display/KB/Using+LDAP%2C+LDAPS+and+AD+for+Testing)
-    - [Drivers Openldap](https://wiki.mongodb.com/display/DI/Testing+LDAP)
+  - **Available LDAP Servers for Testing**  
+    - [AD](https://wiki.mongodb.com/display/KB/Using+LDAP%2C+LDAPS+and+AD+for+Testing)
+    - [Openldap](https://wiki.mongodb.com/display/DI/Testing+LDAP)
 
 
 Note:
