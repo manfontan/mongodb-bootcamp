@@ -245,13 +245,19 @@ olcTLSCertificateKeyFile: /etc/openldap/certs/mongodbserver.key
 
 ### MongoDB and LDAP
 
-  - Authentication and Authorization
++++
+
+  - Authentication
++++
+
+  - Authorization
 
 +++
 
   - Authorization Steps
-    - Auth
-    - Transformation
+    - Authentication: Kerberos, LDAP, X509
+    - Transformation:
+      In order to match the credential formats between the authentication and authorization mechanisms, the user credentials may require a transformation step.
     - Query
     - Validation
 
