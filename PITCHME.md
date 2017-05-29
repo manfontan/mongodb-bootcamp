@@ -86,7 +86,7 @@ Note:
 
   Microsoft AD
 
-+++?image=assets/ad_log.jpg
++++?image=assets/ad_logo.jpg
 
 +++
 
