@@ -226,7 +226,7 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 
 #### Update Openldap certs using ldif
 
-```
+```bash
 ## certs.ldif
 dn: cn=config
 changetype: modify
@@ -241,7 +241,7 @@ olcTLSCertificateKeyFile: /etc/openldap/certs/mongodbserver.key
 ```  
 +++
 
-```
+```bash
 # ldapmodify -Y EXTERNAL -H ldapi:/// -f certs.ldif
 ```
 
@@ -304,15 +304,18 @@ This is a openldap server deployed on ny office, only accessible using the VPN.
 +++
 
 - **Tools**  
-  - mongoldap
   - ldapsearch
+  - mongoldap
+  - ldif
   - openssl s_client
+
++++?image=assets/directory-tree-test.png
 
 +++
 
 - **ldapsearch**
 
-```
+```bash
 [vagrant@centralit ~]$ ldapsearch -x -W -H ldap://centralit/ -D "cn=Manager,dc=WizzyIndustries,dc=com" -b "dc=WizzyIndustries,dc=com" "(objectclass=*)"
 Enter LDAP Password:
 # extended LDIF
@@ -386,8 +389,6 @@ result: 0 Success
 # numResponses: 9
 # numEntries: 8
 ```
-
-+++?image=assets/directory-tree-test.png
 
 +++
 
