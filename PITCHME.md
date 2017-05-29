@@ -53,7 +53,7 @@ Note: NoSQL database actually :).
 ### How to find information?
 
   - **DN (Distinguished Name)**: uniquely identifies an entry and describes its position in the tree.
-    - 'uid= manuel.fontan, ou=server, o=mongodb, dc=com'  
+    - 'uid=manuel.fontan, ou=server, o=mongodb, dc=com'  
     - [RFC 4514](https://tools.ietf.org/pdf/rfc4514.pdf)
 
   - **RDN (Relative DN)**: zero or more comma-separated components that comprise a DN.
@@ -66,6 +66,22 @@ Note:
  - Each RDN is comprised of name-value pairs. Every RDN must contain at least one pair.
  - Even though each component of a DN is in itself an RDN, it is a common practice to refer to the leftmost component of an entry's DN as the RDN for that entry, and to refer to the attributes included in that RDN component as naming attributes. Ex: uid=manuel.fontan
  - The null DN may be used to reference a special entry called the root DSE, which provides a lot of useful information about the directory server
+
++++
+
+  - String representation of a DN:  A DN might have multiple string representations  
+  All of the following are valid ways of representing the same DN:  
+
+    - dc=mongodb,dc=com
+    - dc=mongodb, dc=com
+    - dc = mongodb , dc = com
+    - DC=MONGODB,DC=COM
+    - 0.9.2342.19200300.100.1.25=MongoDB,0.9.2342.19200300.100.1.25=Com  
+
+    You need to be very careful to take this in account when trying to compare DNs.
+
+
+
 
 +++
 
@@ -131,9 +147,9 @@ Note:
     - [OID reference](https://www.ldap.com/ldap-oid-reference)
 
 Note:
-who is this guy? well it is us :).  
-IANA internet assigned numbers authority.
-
+- Who is this guy? well it is us :).  
+- IANA internet assigned numbers authority.
+- You can use the OID to reference an attribute instead of the attribute name.
 +++
 
   - There are a number of different types of elements that may comprise an LDAP schema. Every LDAP schema must include the following elements:
