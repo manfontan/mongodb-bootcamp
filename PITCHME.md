@@ -86,7 +86,6 @@ Note:
 
   Microsoft AD
 
-+++?image=assets/ad_logo.jpg
 
 +++
 
@@ -96,7 +95,9 @@ Note:
 
 +++
 
-  389 Directory Server
+![RHLDAPLOGO](assets/389logo.png)
+
+  [389 Directory Server](http://directory.fedoraproject.org/)
 
 +++
 
