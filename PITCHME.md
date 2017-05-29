@@ -69,8 +69,9 @@ Note:
 
 +++
 
- **String representation of a DN**:  A DN might have multiple string representations.  
-  All of the following are valid ways of representing the same DN:  
+ **String representation of a DN**:  
+ A DN might have multiple string representations.  
+ All of the following are valid ways of representing the same DN:  
 
     - dc=mongodb,dc=com  
 
