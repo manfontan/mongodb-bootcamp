@@ -51,6 +51,40 @@ DC tree
 
     **Understand the protocol to solve server issues**
 
++++
+
+### LDAP flavors  
+    [Server implementations](https://en.wikipedia.org/wiki/List_of_LDAP_software#Server_software)
+
+  +++
+
+  ![ADLOGO](assets/ad_logo.jpg)
+
+    Microsoft AD
+
+  +++
+
+  ![OPENLDAPLOGO](assets/openldap-logo.png)
+
+    [Openldap](http://www.openldap.org/)
+
+  +++
+
+  ![RHLDAPLOGO](assets/389logo.png)
+
+    [389 Directory Server](http://directory.fedoraproject.org/)
+
+  +++
+
+  ![OPENDJLOGO](assets/opendj-logo.png)
+
+    [OpenDJ](https://backstage.forgerock.com/docs/opendj/2.8.0/server-dev-guide/preface)
+
+  +++
+
+  ![apachedslogo](assets/apachedslogo.jpeg)
+
+    [ApacheDS](http://directory.apache.org/apacheds/)
 
 +++
 
@@ -74,40 +108,6 @@ Note:
 
 +++  
   - Security  
-
-+++
-
-  ### LDAP flavors  
-  [Server implementations](https://en.wikipedia.org/wiki/List_of_LDAP_software#Server_software)
-
-+++
-
-![ADLOGO](assets/ad_logo.jpg)
-
-  Microsoft AD
-
-
-+++
-
-![OPENLDAPLOGO](assets/openldap-logo.png)
-
-  [Openldap](http://www.openldap.org/)
-
-+++
-
-![RHLDAPLOGO](assets/389logo.png)
-
-  [389 Directory Server](http://directory.fedoraproject.org/)
-
-+++
-
-![OPENDJLOGO](assets/opendj-logo.png)
-
-  [OpenDJ](https://backstage.forgerock.com/docs/opendj/2.8.0/server-dev-guide/preface)
-
-+++
-
-  ApacheDS
 
 ---
 
@@ -251,9 +251,12 @@ olcTLSCertificateKeyFile: /etc/openldap/certs/mongodbserver.key
 +++
 
   - Authentication
+    - [M310 Chapter 1](https://university.mongodb.com/courses/MongoDB/M310/2017_ondemand_v32/courseware/Chapter_1_Authentication)
 +++
 
   - Authorization
+    - [M034 Chapter 3](https://university.mongodb.com/mercury/M034/2016_ondemand_v1/courseware/Chapter_3_LDAP_Authorization)
+
 
 +++
 
@@ -264,13 +267,14 @@ olcTLSCertificateKeyFile: /etc/openldap/certs/mongodbserver.key
     - Query
     - Validation
 
-+++?image=assets/directory-tree-test.png
++++
+
+  - Understanding [MongoDB LDAP configuration](https://docs.mongodb.com/manual/core/security-ldap-external/#configuration)
 
 +++
 
   - Reference
-    - [M310 Chapter 1](https://university.mongodb.com/courses/MongoDB/M310/2017_ondemand_v32/courseware/Chapter_1_Authentication)
-    - [M034 Chapter 3](https://university.mongodb.com/mercury/M034/2016_ondemand_v1/courseware/Chapter_3_LDAP_Authorization)
+
     - [Mongodb 3.4 LDAP docs](https://docs.mongodb.com/manual/core/security-ldap/)
 
 ---
@@ -298,12 +302,14 @@ This is a openldap server deployed on ny office, only accessible using the VPN.
 
 +++
 
-- Tools  
+- **Tools**  
   - mongoldap
   - ldapsearch
   - openssl s_client
 
 +++
+
+- **ldapsearch**
 
 ```
 [vagrant@centralit ~]$ ldapsearch -x -W -H ldap://centralit/ -D "cn=Manager,dc=WizzyIndustries,dc=com" -b "dc=WizzyIndustries,dc=com" "(objectclass=*)"
@@ -380,19 +386,26 @@ result: 0 Success
 # numEntries: 8
 ```
 
-+++
-
- - Understanding [MongoDB LDAP configuration](https://docs.mongodb.com/manual/core/security-ldap-external/#configuration)
++++?image=assets/directory-tree-test.png
 
 +++
 
-  - OM  
+- **mongoldap**
+
++++
+
+- **openssl**
+
++++
+
+  - [Ops Manager and LDAP](https://docs.google.com/presentation/d/1ka0gm-ErzcnwBFj_vcdLKC5Of_bKBhvx15TFaSWVJas/edit#slide=id.p4)  
+
+Note:
+vagrant ops manager ...
 
 +++
 
   - Ask Emilio :)  
-
-    [Ops Manager and LDAP](https://docs.google.com/presentation/d/1ka0gm-ErzcnwBFj_vcdLKC5Of_bKBhvx15TFaSWVJas/edit#slide=id.p4)  
 
 +++?image=assets/emilio.png
 
