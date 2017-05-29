@@ -253,27 +253,18 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 
 +++
 
-### Testing environments
+- **Testing environments**
+  - **Local testing**  
+    - [Mongo Security Playpen](https://github.com/pkdone/MongoSecurityPlaypen)
+  - **Testing LDAP Servers**  
+    - [Testing AD](https://wiki.mongodb.com/display/KB/Using+LDAP%2C+LDAPS+and+AD+for+Testing)
+    - [Drivers Openldap](https://wiki.mongodb.com/display/DI/Testing+LDAP)
 
-+++
-
-- **Local testing**  
-
-[Mongo Security Playpen](https://github.com/pkdone/MongoSecurityPlaypen)
-
-Note:
-client, openldap server and mongodb 3.4.4 running on vms locally.
-
-+++
-
-- **Testing LDAP Servers**
-
-  - [Testing AD](https://wiki.mongodb.com/display/KB/Using+LDAP%2C+LDAPS+and+AD+for+Testing)
-  - [Drivers Openldap](https://wiki.mongodb.com/display/DI/Testing+LDAP)
 
 Note:
-This is a AWS instance.
-This is a openldap server deployed on ny office, only accessible using the VPN.
+- Client, openldap server and mongodb 3.4.4 running on vms locally.
+- This is a AWS instance.
+- This is a openldap server deployed on ny office, only accessible using the VPN.
 
 +++
 
