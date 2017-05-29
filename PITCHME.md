@@ -99,7 +99,7 @@ Note:
 +++
 
   ![OPENDJLOGO](assets/opendj-logo.png)
-  
+
   [OpenDJ](https://backstage.forgerock.com/docs/opendj/2.8.0/server-dev-guide/preface)
 
 +++
@@ -256,7 +256,7 @@ olcTLSCertificateKeyFile: /etc/openldap/certs/mongodbserver.key
 
   - Authorization Steps
     - Authentication: Kerberos, LDAP, X509
-    - Transformation:
+    - Transformation:  
       In order to match the credential formats between the authentication and authorization mechanisms, the user credentials may require a transformation step.
     - Query
     - Validation
