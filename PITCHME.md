@@ -86,7 +86,7 @@ Note:
 
   ![ADLOGO](assets/ad-logo.jpg)
 
-  +++?image=assets/ad-log.jpg
++++?image=assets/ad-log.jpg
 
 +++
 
