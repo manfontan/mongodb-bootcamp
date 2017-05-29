@@ -82,9 +82,9 @@ Note:
 
 +++
 
-  ![ADLOGO](assets/ad-logo.jpg)
-
   Microsoft AD
+
+  ?image=assets/ad-logo.jpg
 
 +++
 
