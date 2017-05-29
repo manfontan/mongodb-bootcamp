@@ -53,14 +53,14 @@ Note: NoSQL database actually :).
 ### How to find information?
 
   - **DN (Distinguished Name)**: uniquely identifies an entry and describes its position in the tree.
-    - 'uid=manuel.fontan, ou=server, o=mongodb, dc=com'  
+    - ```'uid=manuel.fontan, ou=server, o=mongodb, dc=com'```  
     - [RFC 4514](https://tools.ietf.org/pdf/rfc4514.pdf)
 
   - **RDN (Relative DN)**: zero or more comma-separated components that comprise a DN.
-    - uid=manuel.fontan
-    - ou=server
-    - o=mongodb
-    - dc=com
+    - ```uid=manuel.fontan```
+    - ```ou=server```
+    - ```o=mongodb```
+    - ```dc=com```
 
 Note:
  - Each RDN is comprised of name-value pairs. Every RDN must contain at least one pair.
@@ -72,14 +72,16 @@ Note:
  **String representation of a DN**:  
  A DN might have multiple string representations.  
  All of the following are valid ways of representing the same DN:
+```
+    dc=mongodb,dc=com  
+    dc=mongodb, dc=com  
+    dc = mongodb , dc = com  
+    DC=MONGODB,DC=COM  
+    0.9.2342.19200300.100.1.25=MongoDB,0.9.2342.19200300.100.1.25=Com  
+```  
+You need to be very careful to take this in account when trying to compare DNs.
 
-    - dc=mongodb,dc=com  
-    - dc=mongodb, dc=com  
-    - dc = mongodb , dc = com  
-    - DC=MONGODB,DC=COM  
-    - 0.9.2342.19200300.100.1.25=MongoDB,0.9.2342.19200300.100.1.25=Com  
 
-    You need to be very careful to take this in account when trying to compare DNs.
 
 +++
 
