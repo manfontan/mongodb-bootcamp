@@ -31,25 +31,41 @@ Note: NoSQL database actually :).
 
 +++
 
-How does it look?
-
-LDAP directory tree(traditional naming)  
-
-+++?image=assets/intro_tree.png  
-
-+++
-
-DC tree  
-
-+++?image=assets/intro_dctree.png
-
-+++
-
   - **AP**: Access Protocol  
     - not server(implementation of the protocol) as many refer to it.  
     - [IETF](http://www.ietf.org/) Standard Track protocol and is specified in "Lightweight Directory Access Protocol (LDAP) Technical Specification Road Map" [RFC4510](http://www.rfc-editor.org/rfc/rfc4510.txt)  
 
     **Understand the protocol to solve server issues**
+
++++
+
+### How does a Directory look?
+
+ - LDAP directory tree(traditional naming)  
+ - DC tree  
+
++++?image=assets/intro_tree.png  
+
++++?image=assets/intro_dctree.png
+
++++
+
+### How to find information?
+
+  - DN: uniquely identifies an entry and describes its position in the
+    - 'uid= manuel.fontan, ou=server, o=mongodb, dc=com'  
+    - [RFC 4514](https://tools.ietf.org/pdf/rfc4514.pdf)
+
+  - RDN: zero or more comma-separated components that comprise a DN:
+    - uid=manuel.fontan
+    - ou=server
+    - o=mongodb
+    - dc=com
+
+Note:
+ - Each RDN is comprised of name-value pairs. Every RDN must contain at least one pair.
+ - Even though each component of a DN is in itself an RDN, it is a common practice to refer to the leftmost component of an entry's DN as the RDN for that entry, and to refer to the attributes included in that RDN component as naming attributes. Ex: uid=manuel.fontan
+ - The null DN may be used to reference a special entry called the root DSE, which provides a lot of useful information about the directory server
 
 +++
 
@@ -85,6 +101,7 @@ Note:
 
 +++  
   - Public Standard [rfc4510](https://tools.ietf.org/pdf/rfc4510.pdf)  
+
 +++  
   - Mature  
 
