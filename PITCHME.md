@@ -54,37 +54,38 @@ DC tree
 +++
 
 ### LDAP flavors  
-    [Server implementations](https://en.wikipedia.org/wiki/List_of_LDAP_software#Server_software)
 
-  +++
+[Server implementations](https://en.wikipedia.org/wiki/List_of_LDAP_software#Server_software)
 
-  ![ADLOGO](assets/ad_logo.jpg)
++++
 
-    Microsoft AD
+![ADLOGO](assets/ad_logo.jpg)
 
-  +++
+  Microsoft AD
 
-  ![OPENLDAPLOGO](assets/openldap-logo.png)
++++
 
-    [Openldap](http://www.openldap.org/)
+![OPENLDAPLOGO](assets/openldap-logo.png)
 
-  +++
+  [Openldap](http://www.openldap.org/)
 
-  ![RHLDAPLOGO](assets/389logo.png)
++++
 
-    [389 Directory Server](http://directory.fedoraproject.org/)
+![RHLDAPLOGO](assets/389logo.png)
 
-  +++
+  [389 Directory Server](http://directory.fedoraproject.org/)
 
-  ![OPENDJLOGO](assets/opendj-logo.png)
++++
 
-    [OpenDJ](https://backstage.forgerock.com/docs/opendj/2.8.0/server-dev-guide/preface)
+![OPENDJLOGO](assets/opendj-logo.png)
 
-  +++
+  [OpenDJ](https://backstage.forgerock.com/docs/opendj/2.8.0/server-dev-guide/preface)
 
-  ![apachedslogo](assets/apachedslogo.jpeg)
++++
 
-    [ApacheDS](http://directory.apache.org/apacheds/)
+![apachedslogo](assets/apachedslogo.jpeg)
+
+  [ApacheDS](http://directory.apache.org/apacheds/)
 
 +++
 
