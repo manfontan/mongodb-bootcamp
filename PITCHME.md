@@ -95,12 +95,12 @@ Note:
   - Security
 
 Note:
-- Support to automatically encoding passwords with one-way digests or encryption
-this make it easy to authenticate users while makes it very difficult to determine
-what their clear-text credentials really are.(Not used by mongodb).
-- Support extensible authentication via SASL framework. (Non password based, Kerberos...).
-- Support for password policy features (expiration, quality validation, account lockout ...).
-- Fine-grained access control.
+  - Support to automatically encoding passwords with one-way digests or encryption  
+  this make it easy to authenticate users while makes it very difficult to determine  
+  what their clear-text credentials really are.(Not used by mongodb).
+  - Support extensible authentication via SASL framework. (Non password based, Kerberos...).
+  - Support for password policy features (expiration, quality validation, account lockout ...).
+  - Fine-grained access control.
 
 ---
 
