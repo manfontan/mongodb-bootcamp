@@ -79,9 +79,8 @@ Note:
     DC=MONGODB,DC=COM  
     0.9.2342.19200300.100.1.25=MongoDB,0.9.2342.19200300.100.1.25=Com  
 ```  
-You need to be very careful to take this in account when trying to compare DNs.
-
-
+Note:
+- You need to be very careful to take this in account when trying to compare DNs.
 
 +++
 
