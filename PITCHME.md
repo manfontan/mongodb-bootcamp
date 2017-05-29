@@ -63,7 +63,7 @@ DC tree
 ![OPENLDAPLOGO](assets/openldap-logo.png)
 ![RHLDAPLOGO](assets/389logo.png)
 ![OPENDJLOGO](assets/opendj-logo.png)
-![apachedslogo](assets/apachedslogo.jpeg)
+![apachedslogo](assets/apachedslogo.jpeg)  
 
   Microsoft AD  
   [Openldap](http://www.openldap.org/)  
