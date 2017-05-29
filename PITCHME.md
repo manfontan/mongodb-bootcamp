@@ -272,7 +272,7 @@ Note:
   - [ldapsearch](https://linux.die.net/man/1/ldapsearch)
   - [mongoldap](https://docs.mongodb.com/manual/reference/program/mongoldap/)
   - [ldif](https://tools.ietf.org/pdf/rfc2849.pdf) -> [ldapmodify](https://linux.die.net/man/1/ldapmodify)
-  - [openssl s_client](https://wiki.openssl.org/index.php/Manual:S_client(1))
+  - [openssl s_client]('https://wiki.openssl.org/index.php/Manual:S_client(1)')
 
 +++?image=assets/directory-tree-test.png
 
@@ -369,7 +369,7 @@ result: 0 Success
 
 +++
 
-#### Update Openldap certs using ldapmodify and ldif
+**Update Openldap certs using ldapmodify and ldif**
 
 ```bash
 ## certs.ldif
