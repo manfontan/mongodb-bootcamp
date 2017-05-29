@@ -386,6 +386,28 @@ result: 0 Success
 
 +++
 
+#### Update Openldap certs using ldapmodify and ldif
+
+```bash
+## certs.ldif
+dn: cn=config
+changetype: modify
+add: olcTLSCACertificateFile
+olcTLSCACertificateFile: /etc/openldap/certs/mongodbca.crt
+-
+replace: olcTLSCertificateFile
+olcTLSCertificateFile: /etc/openldap/certs/mongodbserver.crt
+-
+replace: olcTLSCertificateKeyFile
+olcTLSCertificateKeyFile: /etc/openldap/certs/mongodbserver.key
+```  
+
+```bash
+# ldapmodify -Y EXTERNAL -H ldapi:/// -f certs.ldif
+```
+
++++
+
   - [Ops Manager and LDAP](https://docs.google.com/presentation/d/1ka0gm-ErzcnwBFj_vcdLKC5Of_bKBhvx15TFaSWVJas/edit#slide=id.p4)  
 
 Note:
