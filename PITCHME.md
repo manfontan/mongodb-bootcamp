@@ -52,11 +52,11 @@ Note: NoSQL database actually :).
 
 ### How to find information?
 
-  - DN: uniquely identifies an entry and describes its position in the
+  - **DN (Distinguished Name)**: uniquely identifies an entry and describes its position in the tree.
     - 'uid= manuel.fontan, ou=server, o=mongodb, dc=com'  
     - [RFC 4514](https://tools.ietf.org/pdf/rfc4514.pdf)
 
-  - RDN: zero or more comma-separated components that comprise a DN:
+  - **RDN (Relative DN)**: zero or more comma-separated components that comprise a DN.
     - uid=manuel.fontan
     - ou=server
     - o=mongodb
