@@ -82,15 +82,15 @@ Note:
 
 +++
 
-  ![ADLOGO](assets/ad-logo.jpg)
+![ADLOGO](assets/ad_logo.jpg)
 
   Microsoft AD
 
-+++?image=assets/ad-log.jpg
++++?image=assets/ad_log.jpg
 
 +++
 
-  ![OPENLDAPLOGO](assets/openldap-logo.png)
+![OPENLDAPLOGO](assets/openldap-logo.png)
 
   [Openldap](http://www.openldap.org/)
 
@@ -100,7 +100,7 @@ Note:
 
 +++
 
-  ![OPENDJLOGO](assets/opendj-logo.png)
+![OPENDJLOGO](assets/opendj-logo.png)
 
   [OpenDJ](https://backstage.forgerock.com/docs/opendj/2.8.0/server-dev-guide/preface)
 
