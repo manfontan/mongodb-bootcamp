@@ -316,6 +316,8 @@ Note:
 
 ```bash
 [vagrant@centralit ~]$ ldapsearch -x -W -H ldap://centralit/ -D "cn=Manager,dc=WizzyIndustries,dc=com" -b "dc=WizzyIndustries,dc=com" "(objectclass=*)"
+```
+```bash
 Enter LDAP Password:
 # extended LDIF
 #
