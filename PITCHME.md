@@ -160,7 +160,7 @@ Note:
     - Query
     - Validation
 
-Notes:
+Note:
 - managing existing users.
   - User has a corresponding user object on LDAP server.
   - User exist on the ```$external``` database with equivalent roles and privileges
