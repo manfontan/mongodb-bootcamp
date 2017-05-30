@@ -234,7 +234,7 @@ Note:
 [vagrant@centralit ~]$ ldapsearch -x -W -H ldap://centralit/ -D "cn=Manager,dc=WizzyIndustries,dc=com" -b "dc=WizzyIndustries,dc=com" "(objectclass=*)"
 ```
 
-+++?image=assets/directory-tree-test.png
+![LDAP TEST SCHEMA](assets/directory-tree-test.png)
 
 +++
 
@@ -277,11 +277,11 @@ Executing query against LDAP server...
 
 - Is the connection to ldap server working? **openssl**
 
-```bash  
+```ruby
 [vagrant@centralit ~]$ openssl s_client -connect localhost:389
 ```
 
-```bash  
+```java  
 CONNECTED(00000003)
 140018383955872:error:140790E5:SSL routines:SSL23_WRITE:ssl handshake failure:s23_lib.c:184:
 
@@ -305,7 +305,7 @@ Expansion: NONE
 
 **Update Openldap certs using ldapmodify and ldif**
 
-```bash
+```ruby
 ## certs.ldif
 dn: cn=config
 changetype: modify
@@ -319,8 +319,8 @@ replace: olcTLSCertificateKeyFile
 olcTLSCertificateKeyFile: /etc/openldap/certs/mongodbserver.key
 ```  
 
-```bash
-# ldapmodify -Y EXTERNAL -H ldapi:/// -f certs.ldif
+```ruby
+$ ldapmodify -Y EXTERNAL -H ldapi:/// -f certs.ldif
 ```
 
 +++
@@ -333,8 +333,7 @@ vagrant ops manager ...
 +++
 
   - Ask Emilio :)  
-
-+++?image=assets/emilio.png
+![AskEmilio](assets/emilio.png)
 
 ---
 
