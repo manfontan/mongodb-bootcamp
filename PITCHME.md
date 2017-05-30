@@ -69,17 +69,17 @@ Note:
 
 ### How does a Directory look?
 
-- **Directory Information Tree**
-  - LDAP directory tree(traditional naming)  
-  - Domain Component(DC) tree  
+- **Directory Information Tree** tree-like representation of the directory data  
+consisting of Distinguished Names ad directory services.
 
-+++?image=assets/intro_tree.png  
+Note:
+- directory service: It is a shared information infrastructure for locating, managing, administering and organizing everyday items and network resources, which can include volumes, folders, files, printers, users, groups, devices, telephone numbers and other objects.
 
 +++?image=assets/intro_dctree.png
 
 +++
 
-### How to find information?
+### Identifying tree elements?
 
   - **DN (Distinguished Name)**: uniquely identifies an entry and describes its position in the tree.
     - `'uid=manuel.fontan, ou=server, o=mongodb, dc=com'`
@@ -175,7 +175,7 @@ Notes:
   $ less /etc/mongod.conf
 ```
 
-```bash  
+```java  
   security:
    authorization: "enabled"
    clusterAuthMode: keyFile
@@ -221,8 +221,8 @@ Note:
 +++
 
 - **Tools**  
-  - [ldapsearch](https://linux.die.net/man/1/ldapsearch)
   - [mongoldap](https://docs.mongodb.com/manual/reference/program/mongoldap/)
+  - [ldapsearch](https://linux.die.net/man/1/ldapsearch)
   - [ldif](https://tools.ietf.org/pdf/rfc2849.pdf) -> [ldapmodify](https://linux.die.net/man/1/ldapmodify)
   - [openssl s_client](https://wiki.openssl.org/index.php/Manual:S_client(1%29)
 
@@ -233,79 +233,6 @@ Note:
 ```bash
 [vagrant@centralit ~]$ ldapsearch -x -W -H ldap://centralit/ -D "cn=Manager,dc=WizzyIndustries,dc=com" -b "dc=WizzyIndustries,dc=com" "(objectclass=*)"
 ```
-```bash
-Enter LDAP Password:
-# extended LDIF
-#
-# LDAPv3
-# base <dc=WizzyIndustries,dc=com> with scope subtree
-# filter: (objectclass=*)
-# requesting: ALL
-#
-
-# WizzyIndustries.com
-dn: dc=WizzyIndustries,dc=com
-objectClass: dcObject
-objectClass: organization
-o: WizzyIndustries com
-dc: WizzyIndustries
-
-# Manager, WizzyIndustries.com
-dn: cn=Manager,dc=WizzyIndustries,dc=com
-objectClass: organizationalRole
-cn: Manager
-description: Directory Manager
-
-# Users, WizzyIndustries.com
-dn: ou=Users,dc=WizzyIndustries,dc=com
-objectClass: organizationalUnit
-ou: Users
-
-# Groups, WizzyIndustries.com
-dn: ou=Groups,dc=WizzyIndustries,dc=com
-objectClass: organizationalUnit
-ou: Groups
-
-# dbmaster, Users, WizzyIndustries.com
-dn: cn=dbmaster,ou=Users,dc=WizzyIndustries,dc=com
-objectClass: inetOrgPerson
-objectClass: person
-objectClass: organizationalPerson
-cn: dbmaster
-sn: dbmaster
-uid: dbmaster
-userPassword:: e1NTSEF9NVd2SXdVNU84d0xQQnBRUHB1WFg5NEFFYmgrR2tWRHE=
-
-# jsmith, Users, WizzyIndustries.com
-dn: cn=jsmith,ou=Users,dc=WizzyIndustries,dc=com
-objectClass: inetOrgPerson
-objectClass: person
-objectClass: organizationalPerson
-cn: jsmith
-sn: jsmith
-uid: jsmith
-userPassword:: e1NTSEF9RnJTMENydGJvenpqZDRVT0JPazYxZnI3bzhFaHFvdXM=
-
-# DBAdmin, Groups, WizzyIndustries.com
-dn: cn=DBAdmin,ou=Groups,dc=WizzyIndustries,dc=com
-objectClass: groupOfNames
-cn: DBAdmin
-member: cn=dbmaster,ou=Users,dc=WizzyIndustries,dc=com
-
-# AppReadOnly, Groups, WizzyIndustries.com
-dn: cn=AppReadOnly,ou=Groups,dc=WizzyIndustries,dc=com
-objectClass: groupOfNames
-cn: AppReadOnly
-member: cn=dbmaster,ou=Users,dc=WizzyIndustries,dc=com
-member: cn=jsmith,ou=Users,dc=WizzyIndustries,dc=com
-
-# search result
-search: 2
-result: 0 Success
-
-# numResponses: 9
-# numEntries: 8
-```
 
 +++?image=assets/directory-tree-test.png
 
@@ -313,10 +240,10 @@ result: 0 Success
 
 - Is my mongodb config ok? **mongoldap**
 
-```bash
+```java
 [vagrant@dbnode2 ~]$ mongoldap --ldapServers centralit.vagrant.dev:389 -f /etc/mongod.conf --user dbmaster --password ************
 ```
-```bash
+```java
 Running MongoDB LDAP authorization validation checks...
 Version: 3.4.4
 
@@ -332,7 +259,7 @@ Parsing MongoDB to LDAP DN mappings...
 Attempting to authenticate against the LDAP server...
 [OK] Successful authentication performed
 
-Checking \if LDAP authorization has been enabled by configuration...
+Checking if LDAP authorization has been enabled by configuration...
 [OK] LDAP authorization enabled
 
 Parsing LDAP query template...
