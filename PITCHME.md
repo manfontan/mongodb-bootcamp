@@ -432,25 +432,24 @@ Executing query against LDAP server...
 
 - Is the connection to ldap server working? **openssl**
 
-```bash
+```bash  
 [vagrant@centralit ~]$ openssl s_client -connect localhost:389
 ```
 
-```bash
+```bash  
 CONNECTED(00000003)
 140018383955872:error:140790E5:SSL routines:SSL23_WRITE:ssl handshake failure:s23_lib.c:184:
----
+
 no peer certificate available
----
+
 No client certificate CA names sent
----
+
 SSL handshake has read 0 bytes and written 249 bytes
----
+
 New, (NONE), Cipher is (NONE)
 Secure Renegotiation IS NOT supported
 Compression: NONE
 Expansion: NONE
----
 ```
 
 +++
