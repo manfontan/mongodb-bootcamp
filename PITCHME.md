@@ -355,8 +355,8 @@ Note:
         # Translate username to full LDAP DN before looking up in LDAP
         userToDNMapping: '[  
         {match: "(.+)", substitution: "cn={0},ou=Users,dc=WizzyIndustries,dc=com"}  
-        ]'  
-        bind:  
+        ]'
+        bind:
           method: "simple"
         authz:
           queryTemplate: "ou=Groups,dc=WizzyIndustries,dc=com??sub?(&(objectClass=groupOfNames)(member={USER}))"
