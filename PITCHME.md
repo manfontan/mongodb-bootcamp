@@ -185,11 +185,11 @@ security:
     transportSecurity: "none"
     # Translate username to full LDAP DN before looking up in LDAP
     userToDNMapping: '[
-    {match: "(.+)", substitution: "cn={0},ou=Users,dc=WizzyIndustries,dc=com"}]'
+{match: "(.+)", substitution: "cn={0},ou=Users,dc=WizzyIndustries,dc=com"}]'
     bind:
-     method: "simple"
+      method: "simple"
     authz:
-     queryTemplate:"ou=Groups,dc=WizzyIndustries,dc=com??sub?(&(objectClass=groupOfNames)(member={USER}))"
+      queryTemplate:"ou=Groups,dc=WizzyIndustries,dc=com??sub?(&(objectClass=groupOfNames)(member={USER}))"
   enableEncryption: true
   encryptionCipherMode: "AES256-CBC"
   encryptionKeyFile: "/etc/security/encryption-mongodb-keyfile"
