@@ -140,18 +140,47 @@ Note:
 
 +++
 
-  - Naming convention OIDs:  
-    - [1.3.6.1.4.1.34601](https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers)
-    - [IANA](https://www.iana.org/about)  
-    - [OID reference](https://www.ldap.com/ldap-oid-reference)
+  - There are a number of different types of elements that may comprise an LDAP schema. Every LDAP schema must include the following elements:
+    - Attribute syntaxes
+    - Matching rules
+    - Attribute types
+    - Object classes
 
 Note:
+- Think of it as information about the database structure. Same as SQL information
+about tables, columns ...
+
++++
+
+- **OIDs: (object identifiers)**
+
+  An **OID** is basically a sequence of numbers separated by periods.
+
+- OIDs are used in many ways in LDAP:
+  - As canonical identifiers for a number of schema elements.
+  - To identify LDAP request and response controls.
+  - To identify LDAP extended request and response types.
+
+Note:
+- Cons: they are not human-readable
+- Pros:
+  - prevent conflicts, inherent hierarchy orgs with their own OID can define  
+their own OIDs.
+  - compact prevent long names.(important when the message is restricted to a single packet)
 - Who is this guy? well it is us :).  
 - IANA internet assigned numbers authority.
 - You can use the OID to reference an attribute instead of the attribute name.
+
 +++
 
-  - There are a number of different types of elements that may comprise an LDAP schema. Every LDAP schema must include the following elements:
+- **Obtaining your own OID:**
+ - [1.3.6.1.4.1.34601](https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers)
+ - [IANA](https://www.iana.org/about)  
+
+Note:
+- If you are going to use LDAP in any significant way, you will almost certainly find it necessary to define your own attribute types and object classes for representing the data that you want to store in a directory server.
+
++++
 
 +++
 
@@ -199,8 +228,17 @@ cn - country name, dc - domain component, organization, organization unit
 
 +++
 
-### Some LDAP Operations
-
+### LDAP Operations
+  - Abandon
+  - Add
+  - **Bind**
+  - Compare
+  - Delete
+  - Extended
+  - Modify
+  - Modify DN
+  - **Search**
+  - **Unbind**
 +++
 
 ### Bind Operation  
@@ -234,6 +272,27 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 
 ### Search Operation
 
+  A search operation can be used to retrieve partial or complete copies of entries matching a given set of criteria. The elements of an LDAP search include:  
+    - Search base DN: the base of the subtree in which the search is to be constrained.
+    - Search Scope: portion of the target subtree that should be considered.
+      - baseObject
+      - singleLevel
+      - wholeSubtree
+      - subordinateDubtree
+    - Alias dereferencing behavior.
+    - Size limit for the search.
+    - Time limit for the search.
+    - typesOnly flag: if set to true entries matching the criteria should be returned
+    containing only attribute descriptions.
+    - Filter for the search: This specifies criteria to use to identify which entries within the scope should be returned [LDAP Filters](https://tools.ietf.org/pdf/rfc4515.pdf)
+    - Set of attributes to request.
+
+Note:
+
+- Each search result entry message will include the DN of the matching entry, along with zero or more of the attributes contained in that entry.
+
+- If the server determines during the course of the search that there may be entries in other servers that match the search criteria, then the server may also return one or more search result reference messages that include referral URIs that the client may or may not decide to follow.
+
 +++
 
 ### LDAP Data Interchange Format (LDIF)
@@ -254,11 +313,15 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 
 +++
 
-  - Authentication
+  - Authentication (available since 3.2)
     - [M310 Chapter 1](https://university.mongodb.com/courses/MongoDB/M310/2017_ondemand_v32/courseware/Chapter_1_Authentication)
+
+Note:
+
+
 +++
 
-  - Authorization
+  - Authorization (new on 3.4)
     - [M034 Chapter 3](https://university.mongodb.com/mercury/M034/2016_ondemand_v1/courseware/Chapter_3_LDAP_Authorization)
 
 
@@ -274,6 +337,33 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 +++
 
   - Understanding [MongoDB LDAP configuration](https://docs.mongodb.com/manual/core/security-ldap-external/#configuration)
+
+  ```bash
+  $ less /etc/mongod.conf
+  ```
+
+  ```bash
+  security:
+   authorization: "enabled"
+   clusterAuthMode: keyFile
+   keyFile: "/etc/security/internal-auth-mongodb-keyfile"
+   redactClientLogData: true
+   ldap:
+        servers: "centralit.vagrant.dev"
+        transportSecurity: "none"
+        # Translate username to full LDAP DN before looking up in LDAP
+        userToDNMapping: '[
+                {match: "(.+)", substitution: "cn={0},ou=Users,dc=WizzyIndustries,dc=com"}
+        ]'
+
+        bind:
+            method: "simple"
+        authz:
+            queryTemplate: "ou=Groups,dc=WizzyIndustries,dc=com??sub?(&(objectClass=groupOfNames)(member={USER}))"
+   enableEncryption: true
+   encryptionCipherMode: "AES256-CBC"
+   encryptionKeyFile: "/etc/security/encryption-mongodb-keyfile"
+  ```
 
 +++
 
