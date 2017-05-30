@@ -276,11 +276,11 @@ Executing query against LDAP server...
 
 - Is the connection to ldap server working? **openssl**
 
-```ruby
+```
 [vagrant@centralit ~]$ openssl s_client -connect localhost:389
 ```
 
-```java  
+```ruby  
 CONNECTED(00000003)
 140018383955872:error:140790E5:SSL routines:SSL23_WRITE:ssl handshake failure:s23_lib.c:184:
 
