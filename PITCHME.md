@@ -69,8 +69,7 @@ Note:
 
 ### How does a Directory look?
 
-- **Directory Information Tree** tree-like representation of the directory data  
-consisting of Distinguished Names ad directory services.
+- **Directory Information Tree (DIT):** tree-like representation of the directory data consisting of Distinguished Names ad directory services.
 
 Note:
 - directory service: It is a shared information infrastructure for locating, managing, administering and organizing everyday items and network resources, which can include volumes, folders, files, printers, users, groups, devices, telephone numbers and other objects.
