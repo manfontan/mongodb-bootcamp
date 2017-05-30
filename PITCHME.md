@@ -238,7 +238,8 @@ cn - country name, dc - domain component, organization, organization unit
   - Modify
   - Modify DN
   - **Search**
-  - **Unbind**
+  - **Unbind**  
+
 +++
 
 ### Bind Operation  
@@ -272,20 +273,20 @@ The **Bind operation** should be thought of as the **"authenticate"** operation.
 
 ### Search Operation
 
-  A search operation can be used to retrieve partial or complete copies of entries matching a given set of criteria. The elements of an LDAP search include:  
-    - Search base DN: the base of the subtree in which the search is to be constrained.
-    - Search Scope: portion of the target subtree that should be considered.
-      - baseObject
-      - singleLevel
-      - wholeSubtree
-      - subordinateDubtree
-    - Alias dereferencing behavior.
-    - Size limit for the search.
-    - Time limit for the search.
-    - typesOnly flag: if set to true entries matching the criteria should be returned
+  A search operation can be used to retrieve partial or complete copies of entries matching a given set of criteria. The elements of an LDAP search include:    
+  - Search base DN: the base of the subtree in which the search is to be constrained.
+  - Search Scope: portion of the target subtree that should be considered.
+    - baseObject
+    - singleLevel
+    - wholeSubtree
+    - subordinateDubtree
+  - Alias dereferencing behavior.
+  - Size limit for the search.
+  - Time limit for the search.
+  - typesOnly flag: if set to true entries matching the criteria should be returned
     containing only attribute descriptions.
-    - Filter for the search: This specifies criteria to use to identify which entries within the scope should be returned [LDAP Filters](https://tools.ietf.org/pdf/rfc4515.pdf)
-    - Set of attributes to request.
+  - Filter for the search: This specifies criteria to use to identify which entries within the scope should be returned [LDAP Filters](https://tools.ietf.org/pdf/rfc4515.pdf)
+  - Set of attributes to request.
 
 Note:
 
@@ -295,9 +296,9 @@ Note:
 
 +++
 
-### LDAP Data Interchange Format (LDIF)
+### LDAP Data Interchange Format (LDIF)  
 
-+++
++++  
 
   - [RFC 2849](https://tools.ietf.org/pdf/rfc2849.pdf)
 
@@ -338,11 +339,11 @@ Note:
 
   - Understanding [MongoDB LDAP configuration](https://docs.mongodb.com/manual/core/security-ldap-external/#configuration)
 
-  ```bash
+```bash
   $ less /etc/mongod.conf
-  ```
+```
 
-  ```bash
+```bash  
   security:
    authorization: "enabled"
    clusterAuthMode: keyFile
@@ -363,7 +364,7 @@ Note:
    enableEncryption: true
    encryptionCipherMode: "AES256-CBC"
    encryptionKeyFile: "/etc/security/encryption-mongodb-keyfile"
-  ```
+```
 
 +++
 
