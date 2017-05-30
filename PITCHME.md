@@ -39,33 +39,25 @@ Note: NoSQL database actually :).
 
 +++
 
-### Why do organizations use LDAP?
+### Why does MongoDB support LDAP?
 
 - Widely deployed in companies all over the world.
-- Information for an entire organization can be consolidated into a central repository.
-- LDAP also has a well-defined client Application Programming Interface (API), the number of LDAP-enabled applications are numerous and increasing in quantity and quality.
 
 +++  
+### Why does Companies use LDAP?
+
+  - Information for an entire organization can be consolidated into a central repository.
+  - Well-defined client Application Programming Interface (API), the number of LDAP-enabled applications are numerous and increasing in quantity and quality.
   - Lightweight  
+  - Public Standard [rfc4510](https://tools.ietf.org/pdf/rfc4510.pdf)  
+  - Mature  
+  - Security
 
 Note:
   - binary ASN.1 syntax that is used to encode LDAP messages is both very compact and very efficient to parse, especially when compared with text-based protocols like HTTP where the data being transferred is often further bloated by being formatted in XML or JSON.
   - 2048 certs are ok, since they are renewed yearly. 4096 Certs slow the
   handshake process and might lead to issues.
-
-+++  
-  - Public Standard [rfc4510](https://tools.ietf.org/pdf/rfc4510.pdf)  
-
-+++  
-  - Mature  
-
-Note:
- - LDAP has been around since the early 1990s and is a simplified subset of X.500 which has been around since the 1980s.
-
-+++  
-  - Security
-
-Note:
+  - LDAP has been around since the early 1990s and is a simplified subset of X.500 which has been around since the 1980s.
   - Support to automatically encoding passwords with one-way digests or encryption  
   this make it easy to authenticate users while makes it very difficult to determine  
   what their clear-text credentials really are.(Not used by mongodb).
@@ -124,8 +116,6 @@ Note:
 ### LDAP flavors  
 
 [Server implementations](https://en.wikipedia.org/wiki/List_of_LDAP_software#Server_software)
-
-+++
 
 ![ADLOGO](assets/ad_logo.jpg)
 ![OPENLDAPLOGO](assets/openldap-logo.png)
