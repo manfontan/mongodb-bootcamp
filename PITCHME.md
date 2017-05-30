@@ -174,25 +174,21 @@ Note:
   $ less /etc/mongod.conf
 ```
 
-```ruby  
+```
 security:
   authorization: "enabled"
-  clusterAuthMode: keyFile
-  keyFile: "/etc/security/internal-auth-mongodb-keyfile"
-  redactClientLogData: true
-  ldap:
-    servers: "centralit.vagrant.dev"
-    transportSecurity: "none"
-    # Translate username to full LDAP DN before looking up in LDAP
-    userToDNMapping:
-    '[{match: "(.+)", substitution: "cn={0},ou=Users,dc=WizzyIndustries,dc=com"}]'
-    bind:
-      method: "simple"
-    authz:
-      queryTemplate:"ou=Groups,dc=WizzyIndustries,dc=com??sub?(&(objectClass=groupOfNames)(member={USER}))"
-  enableEncryption: true
-  encryptionCipherMode: "AES256-CBC"
-  encryptionKeyFile: "/etc/security/encryption-mongodb-keyfile"
+```
+```
+ldap:
+  servers: "centralit.vagrant.dev"
+  transportSecurity: "none"
+  # Translate username to full LDAP DN before looking up in LDAP
+  userToDNMapping:
+  '[{match: "(.+)", substitution: "cn={0},ou=Users,dc=WizzyIndustries,dc=com"}]'
+  bind:
+    method: "simple"
+  authz:
+    queryTemplate:"ou=Groups,dc=WizzyIndustries,dc=com??sub?(&(objectClass=groupOfNames)(member={USER}))"
 ```
 
 ---
