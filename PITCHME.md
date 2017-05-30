@@ -315,10 +315,12 @@ Note:
 +++
 
   - Authentication (available since 3.2)
+    - Proxy auth using saslauthd
+    - Direct auth (new on 3.4)
     - [M310 Chapter 1](https://university.mongodb.com/courses/MongoDB/M310/2017_ondemand_v32/courseware/Chapter_1_Authentication)
 
 Note:
-
+- LDAP for 3.2 is only available using saslathd daemon(Unix only).
 
 +++
 
