@@ -41,8 +41,9 @@ Note: NoSQL database actually :).
 
 ### Why do organizations use LDAP?
 
-Information for an entire organization can be consolidated into a central repository.
-LDAP also has a well-defined client Application Programming Interface (API), the number of LDAP-enabled applications are numerous and increasing in quantity and quality.
+- Widely deployed in companies all over the world.
+- Information for an entire organization can be consolidated into a central repository.
+- LDAP also has a well-defined client Application Programming Interface (API), the number of LDAP-enabled applications are numerous and increasing in quantity and quality.
 
 +++  
   - Lightweight  
@@ -76,8 +77,9 @@ Note:
 
 ### How does a Directory look?
 
- - LDAP directory tree(traditional naming)  
- - DC tree  
+- **Directory Information Tree**
+  - LDAP directory tree(traditional naming)  
+  - Domain Component(DC) tree  
 
 +++?image=assets/intro_tree.png  
 
@@ -141,7 +143,8 @@ Note:
 
 ### MongoDB and LDAP
 
-+++?image=assets/auth_diagram.png
+  - **Authentication**
+  - **Authorization**
 
 +++
 
@@ -203,12 +206,6 @@ Notes:
     encryptionCipherMode: "AES256-CBC"
     encryptionKeyFile: "/etc/security/encryption-mongodb-keyfile"
 ```
-
-+++
-
-  - Reference
-
-    - [Mongodb 3.4 LDAP docs](https://docs.mongodb.com/manual/core/security-ldap/)
 
 ---
 
@@ -429,10 +426,11 @@ vagrant ops manager ...
 +++
 
   - There are a number of different types of elements that may comprise an LDAP schema. Every LDAP schema must include the following elements:
-    - Attribute syntaxes
-    - Matching rules
-    - Attribute types
-    - Object classes
+    - Attribute syntaxes [RFC 4517](https://tools.ietf.org/pdf/rfc4517.pdf)
+    - Matching rules [RFC 4517](https://tools.ietf.org/pdf/rfc4517.pdf)
+    - Attribute types [RFC 4519](https://tools.ietf.org/pdf/rfc4519.pdf)
+    - Object classes [RFC 4519](https://tools.ietf.org/pdf/rfc4519.pdf)
+
 
 Note:
 - Think of it as information about the database structure. Same as SQL information
@@ -443,11 +441,6 @@ about tables, columns ...
 - **OIDs: (object identifiers)**
 
   An **OID** is basically a sequence of numbers separated by periods.
-
-- OIDs are used in many ways in LDAP:
-  - As canonical identifiers for a number of schema elements.
-  - To identify LDAP request and response controls.
-  - To identify LDAP extended request and response types.
 
 Note:
 - Cons: they are not human-readable
@@ -470,52 +463,6 @@ Note:
 
 +++
 
-+++
-
-  - **Attribute syntaxes** define the types of data that can be represented in a directory server.
-    - Attribute type description, Bit String, Boolean, Generalized Time, JPEG...
-    - ```( 1.3.6.1.4.1.1466.115.121.1.7 DESC ’Boolean’ )```
-    - [RFC 4517](https://tools.ietf.org/pdf/rfc4517.pdf)
-
-Note:  
-Servers SHOULD recognize all the syntaxes listed in this document, but are not required to otherwise support them, and MAY recognise or support other syntaxes.  
-This representation is referred to as the LDAP-specific encoding to distinguish it from other methods of encoding attribute values Ex. BER X.500.  
-Clients MUST NOT assume that the LDAP-specific encoding of a value of an unrecognized syntax is a human-readable character string.
-
-+++?image=assets/attributesyntax.png
-
-+++
-
-  - **Matching rules** define the kinds of comparisons that can be performed against LDAP data.  
-    - uniqueMemberMatch, bitStringMatch, booleanMatch,...
-    - [RFC 4517](https://tools.ietf.org/pdf/rfc4517.pdf)
-
-Note:
-A matching rule evaluates to TRUE, and in some cases Undefined, as specified in the description of the matching rule; otherwise, it evaluates to FALSE.
-
-+++?image=assets/matchingrules1.png
-
-+++?image=assets/matchingrules2.png
-
-+++
-
-  - **Attribute types** define named units of information that may be stored in entries.
-      - [RFC 4519](https://tools.ietf.org/pdf/rfc4519.pdf)
-      - 'cn','dc','member', 'o', 'ou', 'uniqueMember'...
-
-Note:  
-memberOf is not defined by the protocol.  
-cn - country name, dc - domain component, organization, organization unit
-
-+++
-
-  - **Object classes** define named collections of attribute types which may be used in entries containing that class, and which of those attribute types will be required rather than optional.  
-    - [RFC 4519](https://tools.ietf.org/pdf/rfc4519.pdf)
-    - 'groupOfNames', 'groupOfUniqueNames', 'locality'...
-
-
-+++
-
 ### LDAP Operations
   - Abandon
   - Add
@@ -528,59 +475,10 @@ cn - country name, dc - domain component, organization, organization unit
   - **Search**
   - **Unbind**  
 
-+++
-
-### Bind Operation  
-
-  The function of the Bind operation is to allow authentication
- information to be exchanged between the client and server.
-
-+++
-
-The **Bind operation** should be thought of as the **"authenticate"** operation.
-
-  - *version*: no negotiation, if the server does not support the version will  
-    send a protocolError on the BindResponse.
-
-  - *name*: Name of the Directory Object that the client wants to bind as.  
-     Empty for anonymous binds and SASL auth.
-
-  - *authenticate*:
-    - username passwords - UTF-8 -> [SASLprep](https://tools.ietf.org/pdf/rfc4013.pdf)
-
-+++
-
-### Unbind Operation
-
-  The function of the Unbind operation is to terminate an LDAP session.
- The Unbind operation is not the antithesis of the Bind operation as
- the name implies. The naming of these operations are historical.
- The Unbind operation should be thought of as the **"quit"** operation.
-
-+++
-
-### Search Operation
-
-  A search operation can be used to retrieve partial or complete copies of entries matching a given set of criteria. The elements of an LDAP search include:    
-  - Search base DN: the base of the subtree in which the search is to be constrained.
-  - Search Scope: portion of the target subtree that should be considered.
-    - baseObject
-    - singleLevel
-    - wholeSubtree
-    - subordinateDubtree
-  - Alias dereferencing behavior.
-  - Size limit for the search.
-  - Time limit for the search.
-  - typesOnly flag: if set to true entries matching the criteria should be returned
-    containing only attribute descriptions.
-  - Filter for the search: This specifies criteria to use to identify which entries within the scope should be returned [LDAP Filters](https://tools.ietf.org/pdf/rfc4515.pdf)
-  - Set of attributes to request.
-
 Note:
-
-- Each search result entry message will include the DN of the matching entry, along with zero or more of the attributes contained in that entry.
-
-- If the server determines during the course of the search that there may be entries in other servers that match the search criteria, then the server may also return one or more search result reference messages that include referral URIs that the client may or may not decide to follow.
+- Bind is authentication
+- Unbind is quit
+- Search
 
 +++
 
