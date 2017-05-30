@@ -202,9 +202,8 @@ Notes:
 ### MongoDB LDAP Testing
 
 +++
-  - **Local testing**  
-    - [Mongo Security Playpen](https://github.com/pkdone/MongoSecurityPlaypen)
-    
+  - **Local testing** [(Mongo Security Playpen)](https://github.com/pkdone/MongoSecurityPlaypen)
+
 ![MongoSecurityPlaypen](assets/MongoSecurityPlaypen.png
 )
     Note:
@@ -358,7 +357,12 @@ about tables, columns ...
 
 - **OIDs: (object identifiers)**
 
-  An **OID** is basically a sequence of numbers separated by periods.
+  An **OID** is basically a sequence of numbers separated by periods.  
+  If you are going to use LDAP in any significant way, you will almost certainly find it necessary to define your own attribute types and object classes for representing the data that you want to store in a directory server.
+
+  - **Obtaining your own OID:**
+    - [IANA](https://www.iana.org/about)
+    - [1.3.6.1.4.1.34601](https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers)
 
 Note:
 - Cons: they are not human-readable
@@ -369,15 +373,6 @@ their own OIDs.
 - Who is this guy? well it is us :).  
 - IANA internet assigned numbers authority.
 - You can use the OID to reference an attribute instead of the attribute name.
-
-+++
-
-- **Obtaining your own OID:**
- - [1.3.6.1.4.1.34601](https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers)
- - [IANA](https://www.iana.org/about)  
-
-Note:
-- If you are going to use LDAP in any significant way, you will almost certainly find it necessary to define your own attribute types and object classes for representing the data that you want to store in a directory server.
 
 +++
 
