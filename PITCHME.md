@@ -347,7 +347,7 @@ about tables, columns ...
 
 +++
 
-- **OIDs: (object identifiers)**
+### OIDs: (object identifiers)
 
   An **OID** is basically a sequence of numbers separated by periods.  
   If you are going to use LDAP in any significant way, you will almost certainly find it necessary to define your own attribute types and object classes for representing the data that you want to store in a directory server.
@@ -388,8 +388,6 @@ Note:
 +++
 
 ### LDAP Data Interchange Format (LDIF)  
-
-+++  
 
   - [RFC 2849](https://tools.ietf.org/pdf/rfc2849.pdf)
 
