@@ -97,7 +97,7 @@ Note:
 
 +++
 
-### String representation of a DN 
+### String representation of a DN
  A DN might have multiple string representations.  
  All of the following are valid ways of representing the same DN:
 ```
@@ -174,26 +174,25 @@ Notes:
   $ less /etc/mongod.conf
 ```
 
-```java  
-  security:
-   authorization: "enabled"
-   clusterAuthMode: keyFile
-   keyFile: "/etc/security/internal-auth-mongodb-keyfile"
-   redactClientLogData: true
-   ldap:
-        servers: "centralit.vagrant.dev"
-        transportSecurity: "none"
-        # Translate username to full LDAP DN before looking up in LDAP
-        userToDNMapping: '[  
-        {match: "(.+)", substitution: "cn={0},ou=Users,dc=WizzyIndustries,dc=com"}  
-        ]'
-        bind:
-          method: "simple"
-        authz:
-          queryTemplate: "ou=Groups,dc=WizzyIndustries,dc=com??sub?(&(objectClass=groupOfNames)(member={USER}))"
-    enableEncryption: true
-    encryptionCipherMode: "AES256-CBC"
-    encryptionKeyFile: "/etc/security/encryption-mongodb-keyfile"
+```ruby  
+security:
+  authorization: "enabled"
+  clusterAuthMode: keyFile
+  keyFile: "/etc/security/internal-auth-mongodb-keyfile"
+  redactClientLogData: true
+  ldap:
+    servers: "centralit.vagrant.dev"
+    transportSecurity: "none"
+    # Translate username to full LDAP DN before looking up in LDAP
+    userToDNMapping: '[
+    {match: "(.+)", substitution: "cn={0},ou=Users,dc=WizzyIndustries,dc=com"}]'
+    bind:
+      method: "simple"
+    authz:
+      queryTemplate:"ou=Groups,dc=WizzyIndustries,dc=com??sub?(&(objectClass=groupOfNames)(member={USER}))"
+  enableEncryption: true
+  encryptionCipherMode: "AES256-CBC"
+  encryptionKeyFile: "/etc/security/encryption-mongodb-keyfile"
 ```
 
 ---
