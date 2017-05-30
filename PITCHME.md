@@ -184,8 +184,8 @@ security:
     servers: "centralit.vagrant.dev"
     transportSecurity: "none"
     # Translate username to full LDAP DN before looking up in LDAP
-    userToDNMapping: '[
-{match: "(.+)", substitution: "cn={0},ou=Users,dc=WizzyIndustries,dc=com"}]'
+    userToDNMapping:
+    '[{match: "(.+)", substitution: "cn={0},ou=Users,dc=WizzyIndustries,dc=com"}]'
     bind:
       method: "simple"
     authz:
