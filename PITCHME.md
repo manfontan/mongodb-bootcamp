@@ -300,11 +300,11 @@ Expansion: NONE
 
 +++
 
-- How can I interact with my LDAP server? **ldapmodify**
+- How can I interact with my LDAP server? **ldapmodify**  
 
-+++
-
-**Update Openldap certs using ldapmodify and ldif**
+```ruby
+$ ldapmodify -Y EXTERNAL -H ldapi:/// -f certs.ldif
+```
 
 ```ruby
 ## certs.ldif
@@ -320,18 +320,10 @@ replace: olcTLSCertificateKeyFile
 olcTLSCertificateKeyFile: /etc/openldap/certs/mongodbserver.key
 ```  
 
-```ruby
-$ ldapmodify -Y EXTERNAL -H ldapi:/// -f certs.ldif
-```
 
 +++
 
   - [Ops Manager and LDAP](https://docs.google.com/presentation/d/1ka0gm-ErzcnwBFj_vcdLKC5Of_bKBhvx15TFaSWVJas/edit#slide=id.p4)  
-
-Note:
-vagrant ops manager ...
-
-+++
 
   - Ask Emilio :)  
 ![AskEmilio](assets/emilio.png)
