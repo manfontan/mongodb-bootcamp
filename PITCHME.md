@@ -202,21 +202,23 @@ Notes:
 ### MongoDB LDAP Testing
 
 +++
-
-- **Testing environments**
   - **Local testing**  
     - [Mongo Security Playpen](https://github.com/pkdone/MongoSecurityPlaypen)
+    
+![MongoSecurityPlaypen](assets/MongoSecurityPlaypen.png
+)
+    Note:
+    - Client, openldap server and mongodb 3.4.4 running on vms locally.
++++
+
   - **Available LDAP Servers for Testing**  
     - [AD](https://wiki.mongodb.com/display/KB/Using+LDAP%2C+LDAPS+and+AD+for+Testing)
     - [Openldap](https://wiki.mongodb.com/display/DI/Testing+LDAP)
 
 
 Note:
-- Client, openldap server and mongodb 3.4.4 running on vms locally.
 - This is a AWS instance.
 - This is a openldap server deployed on ny office, only accessible using the VPN.
-
-+++?image=assets/MongoSecurityPlaypen.png
 
 +++
 
