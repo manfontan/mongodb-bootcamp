@@ -101,11 +101,11 @@ Note:
  A DN might have multiple string representations.  
  All of the following are valid ways of representing the same DN:
 ```
-    dc=mongodb,dc=com
-    dc=mongodb, dc=com
-    dc = mongodb , dc = com
-    DC=MONGODB,DC=COM
-    0.9.2342.19200300.100.1.25=MongoDB,0.9.2342.19200300.100.1.25=Com
+dc=mongodb,dc=com
+dc=mongodb, dc=com
+dc = mongodb , dc = com
+DC=MONGODB,DC=COM
+0.9.2342.19200300.100.1.25=MongoDB,0.9.2342.19200300.100.1.25=Com
 ```  
 Note:
 - You need to be very careful to take this in account when trying to compare DNs.
