@@ -300,6 +300,8 @@ Note:
 - This is a AWS instance.
 - This is a openldap server deployed on ny office, only accessible using the VPN.
 
++++?image=assets/MongoSecurityPlaypen.png
+
 +++
 
 - **Tools**  
@@ -308,11 +310,9 @@ Note:
   - [ldif](https://tools.ietf.org/pdf/rfc2849.pdf) -> [ldapmodify](https://linux.die.net/man/1/ldapmodify)
   - [openssl s_client](https://wiki.openssl.org/index.php/Manual:S_client(1%29)
 
-+++?image=assets/directory-tree-test.png
-
 +++
 
-- **ldapsearch**
+- How does my LDAP tree looks like? **ldapsearch**
 
 ```bash
 [vagrant@centralit ~]$ ldapsearch -x -W -H ldap://centralit/ -D "cn=Manager,dc=WizzyIndustries,dc=com" -b "dc=WizzyIndustries,dc=com" "(objectclass=*)"
@@ -389,17 +389,73 @@ result: 0 Success
 # numEntries: 8
 ```
 
-+++
-
-- **mongoldap**
++++?image=assets/directory-tree-test.png
 
 +++
 
-- **openssl**
+- Is my mongodb config ok? **mongoldap**
+
+```bash
+[vagrant@dbnode2 ~]$ mongoldap --ldapServers centralit.vagrant.dev:389 -f /etc/mongod.conf --user dbmaster --password ************
+```
+```bash
+Running MongoDB LDAP authorization validation checks...
+Version: 3.4.4
+
+Checking that an LDAP server has been specified...
+[OK] LDAP server found
+
+Connecting to LDAP server...
+[OK] Connected to LDAP server
+
+Parsing MongoDB to LDAP DN mappings...
+[OK] MongoDB to LDAP DN mappings appear to be valid
+
+Attempting to authenticate against the LDAP server...
+[OK] Successful authentication performed
+
+Checking \if LDAP authorization has been enabled by configuration...
+[OK] LDAP authorization enabled
+
+Parsing LDAP query template...
+[OK] LDAP query configuration template appears valid
+
+Executing query against LDAP server...
+[OK] Successfully acquired the following roles:
+
+	* cn=AppReadOnly,ou=Groups,dc=WizzyIndustries,dc=com@admin
+	* cn=DBAdmin,ou=Groups,dc=WizzyIndustries,dc=com@admin
+```
+
 
 +++
 
-- **ldapmodify**
+- Is the connection to ldap server working? **openssl**
+
+```bash
+[vagrant@centralit ~]$ openssl s_client -connect localhost:389
+```
+
+```bash
+CONNECTED(00000003)
+140018383955872:error:140790E5:SSL routines:SSL23_WRITE:ssl handshake failure:s23_lib.c:184:
+---
+no peer certificate available
+---
+No client certificate CA names sent
+---
+SSL handshake has read 0 bytes and written 249 bytes
+---
+New, (NONE), Cipher is (NONE)
+Secure Renegotiation IS NOT supported
+Compression: NONE
+Expansion: NONE
+---
+```
+
++++
+
+- How can I interact with my LDAP server? **ldapmodify**
 
 +++
 
