@@ -198,9 +198,8 @@ ldap:
 +++
   - **Local testing** [(Mongo Security Playpen)](https://github.com/pkdone/MongoSecurityPlaypen)
 
-![MongoSecurityPlaypen](assets/MongoSecurityPlaypen.png
-)
-    Note:
+![MongoSecurityPlaypen](assets/MongoSecurityPlaypen.png)
+Note:
     - Client, openldap server and mongodb 3.4.4 running on vms locally.
 +++
 
