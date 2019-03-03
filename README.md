@@ -1,6 +1,5 @@
 # mongodb-bootcamp
 
-[![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/manfontan/mongodb-bootcamp/master?grs=github&t=white)
+The slides are avaiblable at: [![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/manfontan/mongodb-bootcamp/master?grs=github&t=white)
 
-
-[MongoSecurityPlaypen](https://github.com/pkdone/MongoSecurityPlaypen)
+For additional fun please check [MongoSecurityPlaypen](https://github.com/pkdone/MongoSecurityPlaypen)
